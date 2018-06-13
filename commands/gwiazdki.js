@@ -21,6 +21,6 @@ exports.conf = {
 
 exports.help = {
   name: "gwiazdki",
-  description: "Wyświetla ilość posiadanych gwiazdek.",
+  description: "Wyświetla liczbę posiadanych gwiazdek.",
   usage: "gwiazdki"
 };

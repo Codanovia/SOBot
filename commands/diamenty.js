@@ -21,6 +21,6 @@ exports.conf = {
 
 exports.help = {
   name: "diamenty",
-  description: "Wyświetla ilość posiadanych diamentów.",
+  description: "Wyświetla liczbę posiadanych diamentów.",
   usage: "diamenty"
 };

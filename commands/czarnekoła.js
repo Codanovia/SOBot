@@ -21,6 +21,6 @@ exports.conf = {
 
 exports.help = {
   name: "czarnekoła",
-  description: "Wyświetla ilość posiadanych czarnych kół.",
+  description: "Wyświetla liczbę posiadanych czarnych kół.",
   usage: "czarnekoła"
 };
