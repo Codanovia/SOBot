@@ -15,7 +15,7 @@ module.exports = message => {
     cmd = client.commands.get(client.aliases.get(command));
   }
   if (cmd) {
-    if (perms < cmd.conf.permLevel) return;
+    if (perms < cmd.conf.permLevel) return message.reply('nie masz uprawnień do używania tej komendy!');
     cmd.run(client, message, params, perms);
   }
 };
