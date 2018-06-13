@@ -1,0 +1,28 @@
+{
+  "name": "czaciorbot",
+  "version": "0.3.1",
+  "description": "Bot stworzony na potrzebe serwera Czacior",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Czacior-Bot"
+  },
+  "keywords": [
+    "czacior",
+    "discord",
+    "bot"
+  ],
+  "author": "Codanovia",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "discord.js": "^11.3.2",
+    "fs": "0.0.1-security",
+    "moment": "^2.22.2",
+    "node-gyp": "^3.6.2",
+    "return-deep-diff": "^0.3.0"
+  }
+}
