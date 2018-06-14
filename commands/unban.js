@@ -7,7 +7,7 @@ exports.run = async (client, message, params) => {
   const modlog = client.channels.find('name', 'ogłoszenia');
   const caseNum = await caseNumber(client, modlog);
   if (!modlog) return message.reply('nie mogę znaleźć kanału z ogłoszeniami.');
-  const reason = params.splice(1, params.length).join(' ') || `Oczekuję wkładu moderatora. Użyj ${config.prefix}reason ${caseNum} <powód>.`;
+  const reason = params.splice(1, params.length).join(' ') || 'brak';
   if (message.mentions.users.size < 1) return message.reply('musisz napisać kogo chcesz odbanować.').catch(console.error);
   message.guild.unban(user);
 

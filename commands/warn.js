@@ -12,7 +12,7 @@ exports.run = async (client, message, params) => {
   if (message.mentions.users.size < 1) return message.reply('musisz napisać komu chcesz dać ostrzeżenie.').catch(console.error);
   message.reply(`pomyślnie wstawiono ostrzeżenie użytkownikowi **${user.tag}**`);
 
-  const reason = params.splice(1, params.length).join(' ') || `Oczekuję wkładu moderatora. Użyj ${config.prefix}reason ${caseNum} <powód>.`;
+  const reason = params.splice(1, params.length).join(' ') || 'brak';
 
   const embed = new RichEmbed()
   .setAuthor('Czacior - ostrzeżenia i bany', 'https://i.imgur.com/zNC67j6.png')
