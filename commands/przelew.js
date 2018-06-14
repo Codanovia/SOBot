@@ -9,7 +9,7 @@ exports.run = async (client, message, params) => {
 
   let pUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(params[0]);
 
-  if (pUser.id === message.author.id) return message.reply('nie możesz przelewać gwiazdek samemu sobie!');
+  if (pUser.id === message.author.id) return message.reply('nie możesz przelać gwiazdek samemu sobie!');
 
   if(!coins[pUser.id]) {
     coins[pUser.id] = {
