@@ -25,7 +25,6 @@
     "moment": "^2.22.2",
     "node-gyp": "^3.6.2",
     "opusscript": "0.0.6",
-    "return-deep-diff": "^0.3.0",
     "superagent": "^3.8.3",
     "ytdl-core": "^0.20.4"
   }
