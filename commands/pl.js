@@ -1,4 +1,5 @@
 exports.run = (client, message, params = []) => {
+  const guild = message.guild;
   guild.member(message.author).addRole('396704315898724353');
 };
 
