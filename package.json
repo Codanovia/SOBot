@@ -1,7 +1,7 @@
 {
   "name": "czaciorbot",
   "version": "0.3.1",
-  "description": "Bot stworzony na potrzebe serwera Czacior",
+  "description": "Bot stworzony na potrzebę serwera Czacior na Discordzie.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
