@@ -59,3 +59,8 @@ typings/
 
 # next.js build output
 .next
+blackorbs.json
+coins.json
+config.json
+diamonds.json
+keys.json
