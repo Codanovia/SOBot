@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "Czacior-Bot"
+    "url": "git+https://github.com/Codanovia/Czacior-Bot.git"
   },
   "keywords": [
     "czacior",
