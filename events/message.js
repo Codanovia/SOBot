@@ -1,5 +1,4 @@
 const config = require('../config.json');
-const fs = require('fs');
 module.exports = message => {
   const client = message.client;
   if (message.author.bot) return;
