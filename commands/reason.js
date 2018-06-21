@@ -35,7 +35,7 @@ exports.run = async (client, message, params) => {
 
 exports.conf = {
   aliases: ['editreason'],
-  permLevel: 0
+  permLevel: 2
 };
 
 exports.help = {

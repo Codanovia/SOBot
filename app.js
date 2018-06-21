@@ -48,13 +48,13 @@ client.reload = command => {
 client.elevation = message => {
   /* This function should resolve to an ELEVATION level which
      is then sent to the command handler for verification*/
-  let permlvl = 0;
+  let permLevel = 0;
   const mod_role = message.guild.roles.find('name', config.modRoleName);
-  if (mod_role && message.member.roles.has(mod_role.id)) permlvl = 2;
+  if (mod_role && message.member.roles.has(mod_role.id)) permLevel = 2;
   const admin_role = message.guild.roles.find('name', config.adminRoleName);
-  if (admin_role && message.member.roles.has(admin_role.id)) permlvl = 3;
-  if (message.author.id === config.ownerID) permlvl = 4;
-  return permlvl;
+  if (admin_role && message.member.roles.has(admin_role.id)) permLevel = 3;
+  if (message.author.id === config.ownerID) permLevel = 4;
+  return permLevel;
 };
 
 var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
