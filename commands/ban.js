@@ -10,9 +10,7 @@ exports.run = async (client, message, params) => {
   const caseNum = await caseNumber(client, modlog);
   if (!modlog) return message.reply('nie mogę znaleźć kanału z ogłoszeniami.');
   if (message.mentions.users.size < 1) return message.reply('musisz napisać kogo chcesz zbanować.').catch(console.error);
-
   message.guild.ban(user, 2);
-  message.reply(`pomyślnie zbanowano użytkownika **${user.tag}**`);
 
   const reason = params.splice(1, params.length).join(' ') || 'brak';
   const embed = new RichEmbed()
