@@ -16,7 +16,7 @@ exports.run = async (client, message, params) => {
   .setAuthor('Czacior - ostrzeżenia i bany', 'https://i.imgur.com/zNC67j6.png')
   .setColor([232, 44, 12])
   .setTimestamp()
-  .setDescription(`**Działanie:** Ostrzeżenie\n**Karany:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Powód:** ${reason}`)
+  .setDescription(`**Działanie:** Ostrzeżenie\n**Karany:** ${user.tag}\n**Odpowiedzialny moderator:** ${message.author.tag}\n**Powód:** ${reason}`)
   .setFooter(`Przypadek ${caseNum}`, "https://i.imgur.com/zNC67j6.png");
   return client.channels.get(modlog.id).send({embed});
 };
