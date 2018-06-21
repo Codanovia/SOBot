@@ -15,7 +15,7 @@ exports.run = async (client, message, params) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['czarnekule'],
+  aliases: ['czarnekule', 'blackcircles', 'blackorbs'],
   permLevel: 0
 };
 
