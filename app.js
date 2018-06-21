@@ -72,4 +72,3 @@ client.on('error', e => {
 });
 
 client.login(config.token);
-//test
