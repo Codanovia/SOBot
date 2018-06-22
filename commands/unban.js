@@ -16,7 +16,7 @@ exports.conf = {
   enabled: false,
   guildOnly: false,
   aliases: ['odbanuj'],
-  permLevel: 2
+  permLevel: 0
 };
 
 exports.help = {
