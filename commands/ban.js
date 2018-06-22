@@ -20,6 +20,7 @@ exports.run = async (client, message, params) => {
   .setDescription(`**Działanie:** Ban\n**Karany:** ${user.tag}\n**Odpowiedzialny moderator:** ${message.author.tag}\n**Powód:** ${reason}`)
   .setFooter(`Przypadek ${caseNum}`, "https://i.imgur.com/zNC67j6.png");
   return client.channels.get(modlog.id).send({embed});
+  user.send(`Zostałeś zbanowany na serwerze za ${reason}! :rage:`);
 };
 
 exports.conf = {

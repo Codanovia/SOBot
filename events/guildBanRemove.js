@@ -9,4 +9,5 @@ module.exports = (guild, user) => {
   .setDescription(`**Działanie:** Unban\n**Wyznaczony użytkownik:** ${user.tag}\n**Odpowiedzialny moderator:** ${guild.client.unbanAuth.tag}\n**Powód:** ${guild.client.unbanReason}`)
   .setFooter("https://i.imgur.com/zNC67j6.png");
   return guild.channels.get(guild.channels.find('name', 'ogłoszenia').id).send({embed});
+  user.send('Mamy świetną nowinę! Właśnie cię odbanowano na najlepszym serwerze Czacior! Łap zaproszenie: https://discord.gg/Gew6cRE')
 };

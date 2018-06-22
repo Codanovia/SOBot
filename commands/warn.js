@@ -19,6 +19,7 @@ exports.run = async (client, message, params) => {
   .setDescription(`**Działanie:** Ostrzeżenie\n**Karany:** ${user.tag}\n**Odpowiedzialny moderator:** ${message.author.tag}\n**Powód:** ${reason}`)
   .setFooter(`Przypadek ${caseNum}`, "https://i.imgur.com/zNC67j6.png");
   return client.channels.get(modlog.id).send({embed});
+  user.send(`Dostałeś ostrzeżenie za ${reason}! Nie jest ci przykro z tego powodu? :thinking:`);
 };
 
 exports.conf = {
