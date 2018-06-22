@@ -13,6 +13,10 @@ exports.run = (client, message, params) => {
   eightBall[10] = 'Czuję, że nie';
   eightBall[11] = 'Absolutnie nie!';
   eightBall[12] = 'Nie myśl o tym';
+  eightBall[13] = 'O co ci chodzi?';
+  eightBall[14] = 'Na pewno nie';
+  eightBall[15] = 'Może';
+  eightBall[16] = 'Myślę, że nie';
 
   message.channel.send(`:8ball: **${eightBall[Math.floor(Math.random()*eightBall.length)]}**`)
 };
