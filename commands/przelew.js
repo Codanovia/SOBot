@@ -22,6 +22,8 @@ exports.run = async (client, message, params) => {
 
   if (sCoins < params[1]) return message.reply('nie masz wystarczającej liczby gwiazdek!');
 
+  if (isNaN(params[1])) return message.reply('wpisana wartość jest nieprawidłowa.');
+
   coins[message.author.id] = {
     coins: sCoins - parseInt(params[1])
   };
