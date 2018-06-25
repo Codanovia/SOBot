@@ -1,7 +1,7 @@
 exports.run = (client, message, params) => {
   let voiceChan = message.member.voiceChannel;
   if (!voiceChan || voiceChan.type !== 'voice') {
-    message.channel.send('Nie');
+    message.channel.send('Nie jesteś na żadnym kanale głosowym!');
   } else if(message.guild.voiceConnection) {
     message.channel.send('Już jestem na kanale głosowym!');
   } else {
