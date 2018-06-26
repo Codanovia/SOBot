@@ -9,7 +9,7 @@ exports.run = async (client, message, params) => {
   message.author.send('Oof! Jeśli chcesz wrócić na serwer, to tutaj masz zaproszenie: https://discord.gg/XWCxeUZ');
   const embed = new RichEmbed()
   .setAuthor('Czacior - ostrzeżenia i bany', 'https://i.imgur.com/zNC67j6.png')
-  .setColor([255, 0, 0])
+  .setColor([232, 44, 12])
   .setTimestamp()
   .setDescription(`**Działanie:** Wyrzucenie z serwera\n**Karany:** ${message.author}\n**Odpowiedzialny moderator:** Autokick\n**Powód:** Oof!`)
   .setFooter(`Przypadek ${caseNum}`, "https://i.imgur.com/zNC67j6.png");
