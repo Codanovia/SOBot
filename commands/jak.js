@@ -1,5 +1,5 @@
 exports.run = (client, message, params) => {
-  message.channel.send('srak');
+  message.reply('srak');
 };
 
 exports.conf = {

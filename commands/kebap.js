@@ -1,5 +1,5 @@
 exports.run = (client, message, params) => {
-  message.channel.send('<:kebap:431920991971573773>')
+  message.reply('<:kebap:431920991971573773>');
 };
 
 exports.conf = {
