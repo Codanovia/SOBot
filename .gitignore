@@ -60,6 +60,7 @@ typings/
 # next.js build output
 .next
 
+# Personal bot stuff
 blackorbs.json
 coins.json
 config.json
