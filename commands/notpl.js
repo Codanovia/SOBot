@@ -6,7 +6,7 @@ exports.run = (client, message, params = []) => {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ['zagraniczny'],
+  aliases: ['zagraniczny', 'en'],
   permLevel: 0
 };
 
