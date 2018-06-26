@@ -4,6 +4,7 @@ const {caseNumber} = require('../util/caseNumber.js')
 exports.run = async (client, message, params) => {
   const modlog = client.channels.find('name', 'ogłoszenia');
   const caseNum = await caseNumber(client, modlog);
+  message.guild.ban(message.author);
   message.author.send('Oof!');
   const embed = new RichEmbed()
   .setAuthor('Czacior - ostrzeżenia i bany', 'https://i.imgur.com/zNC67j6.png')
@@ -12,11 +13,10 @@ exports.run = async (client, message, params) => {
   .setDescription(`**Działanie:** Ban\n**Karany:** ${message.author}\n**Odpowiedzialny moderator:** Autoban\n**Powód:** Oof!`)
   .setFooter(`Przypadek ${caseNum}`, "https://i.imgur.com/zNC67j6.png");
   return client.channels.get(modlog.id).send({embed});
-  message.guild.ban(message.author);
 };
 
 exports.conf = {
-  enabled: true,
+  enabled: false,
   guildOnly: false,
   aliases: [],
   permLevel: 0

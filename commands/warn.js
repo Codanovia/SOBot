@@ -4,7 +4,7 @@ const {parseUser} = require('../util/parseUser.js');
 const config = require('../config.json');
 
 exports.run = async (client, message, params) => {
-  const user = message.mentions.users.first();
+  const {user} = message.mentions.users.first();
   parseUser(message, user);
   const modlog = client.channels.find('name', 'ogłoszenia');
   const caseNum = await caseNumber(client, modlog);
