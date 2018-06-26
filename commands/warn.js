@@ -12,6 +12,7 @@ exports.run = async (client, message, params) => {
   if (message.mentions.users.size < 1) return message.reply('musisz napisać komu chcesz dać ostrzeżenie.').catch(console.error);
 
   const reason = params.splice(1, params.length).join(' ') || 'brak';
+  user.send(`Dostałeś ostrzeżenie za ${reason}! Nie jest ci przykro z tego powodu? :thinking:`);
   const embed = new RichEmbed()
   .setAuthor('Czacior - ostrzeżenia i bany', 'https://i.imgur.com/zNC67j6.png')
   .setColor([232, 44, 12])
@@ -19,7 +20,6 @@ exports.run = async (client, message, params) => {
   .setDescription(`**Działanie:** Ostrzeżenie\n**Karany:** ${user.tag}\n**Odpowiedzialny moderator:** ${message.author.tag}\n**Powód:** ${reason}`)
   .setFooter(`Przypadek ${caseNum}`, "https://i.imgur.com/zNC67j6.png");
   return client.channels.get(modlog.id).send({embed});
-  user.send(`Dostałeś ostrzeżenie za ${reason}! Nie jest ci przykro z tego powodu? :thinking:`);
 };
 
 exports.conf = {

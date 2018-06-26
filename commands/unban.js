@@ -10,6 +10,7 @@ exports.run = async (client, message, params) => {
   if (!modlog) return message.reply('nie mogę znaleźć kanału z ogłoszeniami.');
   if (!user) return message.reply('musisz podać nazwę użytkownika którego chcesz odbanować.').catch(console.error);
   message.guild.unban(user);
+  user.send('Mamy świetną nowinę! Właśnie cię odbanowano na najlepszym serwerze Czacior! Łap zaproszenie i się ciesz: https://discord.gg/Gew6cRE :smile:')
   const embed = new RichEmbed()
   .setAuthor('Czacior - ostrzeżenia i bany', 'https://i.imgur.com/zNC67j6.png')
   .setColor([0, 255, 0])
@@ -17,7 +18,6 @@ exports.run = async (client, message, params) => {
   .setDescription(`**Działanie:** Unban\n**Wyznaczony użytkownik:** ${user.tag}\n**Odpowiedzialny moderator:** ${guild.client.unbanAuth.tag}\n**Powód:** ${guild.client.unbanReason}`)
   .setFooter("https://i.imgur.com/zNC67j6.png");
   return guild.channels.get(modlog.id).send({embed});
-  user.send('Mamy świetną nowinę! Właśnie cię odbanowano na najlepszym serwerze Czacior! Łap zaproszenie i się ciesz: https://discord.gg/Gew6cRE :smile:')
 };
 
 exports.conf = {

@@ -4,8 +4,8 @@ const {caseNumber} = require('../util/caseNumber.js')
 exports.run = async (client, message, params) => {
   const modlog = client.channels.find('name', 'ogłoszenia');
   const caseNum = await caseNumber(client, modlog);
-  const embed = new RichEmbed()
   message.author.send('Oof!');
+  const embed = new RichEmbed()
   .setAuthor('Czacior - ostrzeżenia i bany', 'https://i.imgur.com/zNC67j6.png')
   .setColor([255, 0, 0])
   .setTimestamp()
