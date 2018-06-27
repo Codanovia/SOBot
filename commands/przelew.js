@@ -24,6 +24,8 @@ exports.run = async (client, message, params) => {
 
   if (isNaN(params[1])) return message.reply('wpisana wartość jest nieprawidłowa.');
 
+  if (params[1] < 1) return message.reply('nie możesz przelać zerowych lub ujemnych gwiazdek!');
+
   coins[message.author.id] = {
     coins: sCoins - parseInt(params[1])
   };
@@ -34,7 +36,7 @@ exports.run = async (client, message, params) => {
 
   message.reply(`pomyślnie przelano ${params[1]} <:gwiazdka:424229903664414720> na konto użytkownika ${pUser}`);
 
-  fs.writeFile('../coins.json', JSON.stringify(coins), (err) => {
+  fs.writeFile('./coins.json', JSON.stringify(coins), (err) => {
     if (err) console.error(err)
   });
 

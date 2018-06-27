@@ -1,5 +1,4 @@
-module.exports = (member) => {
-  const guild = member.guild;
+module.exports = (member, client) => {
   console.log(`Użytkownik ${member.user.username} opuścił serwer ${member.guild.name}`);
-  guild.channels.get(guild.channels.find('name', 'wchodzenie_wychodzenie').id).send(`Użytkownik <@${member.user.id}> opuścił Czacior. Mamy nadzieję że kiedyś powrócisz do nas. :cry: `)
+  guild.channels.get('461223372785844247').send(`Użytkownik <@${member.user.id}> opuścił Czacior. Mamy nadzieję że kiedyś powrócisz do nas. :cry: `)
 };
