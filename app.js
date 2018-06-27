@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require('./config.json');
 const chalk = require('chalk');
-const fs = require('fs-extra');
+const fs = require('fs');
 const moment = require('moment');
 require('./util/eventLoader')(client);
 

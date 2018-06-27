@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const fs = require('fs-extra');
+const fs = require('fs');
 let coins = require('../coins.json');
 
 exports.run = async (client, message, params) => {
@@ -35,7 +35,7 @@ exports.run = async (client, message, params) => {
   message.reply(`pomyślnie przelano ${params[1]} <:gwiazdka:424229903664414720> na konto użytkownika ${pUser}`);
 
   fs.writeFile('../coins.json', JSON.stringify(coins), (err) => {
-    if (err) console.log(err)
+    if (err) console.error(err)
   });
 
 };
