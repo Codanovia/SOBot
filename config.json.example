@@ -1,7 +1,8 @@
 {
-  "token": "that was redacted",
+  "token": "your bot token goes here",
   "prefix": "cz!",
   "modRoleName": "Moderator",
   "adminRoleName": "Admin",
+  "bannedRoleName": "Czacior Bot Ban",
   "ownerID": "your id goes here"
 }
