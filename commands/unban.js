@@ -27,5 +27,5 @@ exports.conf = {
 exports.help = {
   name: 'unban',
   description: 'Odbanowuje zbanowanego użytkownika.',
-  usage: 'unban [ID użytkownika]'
+  usage: 'unban [nazwa użytkownika] [powód]'
 };

@@ -31,5 +31,5 @@ exports.conf = {
 exports.help = {
   name: 'warn',
   description: 'Daje ostrzeżenie użytkownikowi naruszający regulamin Czaciora.',
-  usage: 'warn [nazwa użytkownika]'
+  usage: 'warn [nazwa użytkownika] [powód]'
 };

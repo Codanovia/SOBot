@@ -31,5 +31,5 @@ exports.conf = {
 exports.help = {
   name: 'ban',
   description: 'Banuje użytkownika naruszającego regulamin Czaciora.',
-  usage: 'ban [nazwa użytkownika]'
+  usage: 'ban [nazwa użytkownika] [powód]'
 };
