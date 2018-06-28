@@ -4,7 +4,7 @@ const config = require('../config.json');
 exports.run = async (client, message, params) => {
   const reason = params.splice(1, params.length).join(' ') || 'brak';
   const user = params[0];
-  const modlog = '423572352199163906';
+  const modlog = client.channels.find('name', 'ogłoszenia')
   if (!user) return message.reply('musisz podać nazwę użytkownika którego chcesz odbanować.').catch(console.error);
   message.guild.unban(user);
   user.send('Mamy świetną nowinę! Właśnie cię odbanowano na najlepszym serwerze Czacior! Łap zaproszenie i się ciesz: https://discord.gg/Gew6cRE :smile:');
@@ -14,7 +14,7 @@ exports.run = async (client, message, params) => {
   .setTimestamp()
   .setDescription(`**Działanie:** Unban\n**Wyznaczony użytkownik:** ${user.tag}\n**Odpowiedzialny moderator:** ${message.author}\n**Powód:** ${reason}`)
   .setFooter("https://i.imgur.com/zNC67j6.png");
-  return guild.channels.get(modlog).send({embed});
+  return client.channels.get(modlog.id).send({embed});
 };
 
 exports.conf = {

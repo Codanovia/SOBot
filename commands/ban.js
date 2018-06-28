@@ -6,7 +6,7 @@ const config = require('../config.json');
 exports.run = async (client, message, params) => {
   const user = message.mentions.users.first();
   parseUser(message, user);
-  const modlog = '423572352199163906';
+  const modlog = client.channels.find('name', 'ogłoszenia');
   const caseNum = await caseNumber(client, modlog);
   if (message.mentions.users.size < 1) return message.reply('musisz napisać kogo chcesz zbanować.').catch(console.error);
   message.guild.ban(user, 2);
@@ -18,7 +18,7 @@ exports.run = async (client, message, params) => {
   .setTimestamp()
   .setDescription(`**Działanie:** Ban\n**Karany:** ${user.tag}\n**Odpowiedzialny moderator:** ${message.author.tag}\n**Powód:** ${reason}`)
   .setFooter(`Przypadek ${caseNum}`, "https://i.imgur.com/zNC67j6.png");
-  return client.channels.get(modlog).send({embed});
+  return client.channels.get(modlog.id).send({embed});
 };
 
 exports.conf = {
