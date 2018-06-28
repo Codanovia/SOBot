@@ -45,7 +45,7 @@ client.reload = command => {
   });
 };
 
-client.elevation = message => {
+client.permLevel = message => {
   /* This function should resolve to an ELEVATION level which
      is then sent to the command handler for verification*/
   let permLevel = 0;

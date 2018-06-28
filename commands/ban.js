@@ -4,13 +4,11 @@ const {parseUser} = require('../util/parseUser.js');
 const config = require('../config.json');
 
 exports.run = async (client, message, params) => {
-  const {user} = message.mentions.users.first();
+  const user = message.mentions.users.first();
   parseUser(message, user);
-  const modlog = client.channels.find('name', 'ogłoszenia');
+  const modlog = '423572352199163906';
   const caseNum = await caseNumber(client, modlog);
-  if (!modlog) return message.reply('nie mogę znaleźć kanału z ogłoszeniami.');
   if (message.mentions.users.size < 1) return message.reply('musisz napisać kogo chcesz zbanować.').catch(console.error);
-  user.send(`Zostałeś zbanowany na serwerze za ${reason}! :rage:`);
   message.guild.ban(user, 2);
 
   const reason = params.splice(1, params.length).join(' ') || 'brak';
@@ -20,14 +18,14 @@ exports.run = async (client, message, params) => {
   .setTimestamp()
   .setDescription(`**Działanie:** Ban\n**Karany:** ${user.tag}\n**Odpowiedzialny moderator:** ${message.author.tag}\n**Powód:** ${reason}`)
   .setFooter(`Przypadek ${caseNum}`, "https://i.imgur.com/zNC67j6.png");
-  return client.channels.get(modlog.id).send({embed});
+  return client.channels.get(modlog).send({embed});
 };
 
 exports.conf = {
   enabled: true,
   guildOnly: true,
   aliases: ['zbanuj'],
-  permLevel: 0
+  permLevel: 2
 };
 
 exports.help = {

@@ -1,6 +1,6 @@
 {
   "name": "Czacior-Bot",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Bot stworzony na potrzebę serwera Czacior na Discordzie.",
   "main": "app.js",
   "repository": {
