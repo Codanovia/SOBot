@@ -7,7 +7,7 @@ exports.conf = {
   enabled: true,
   guildOnly: true,
   aliases: ['zagraniczny', 'en'],
-  permLevel: 0
+  permLevel: 1
 };
 
 exports.help = {

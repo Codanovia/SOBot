@@ -1,10 +1,37 @@
 const Discord = require('discord.js');
 const fs = require('fs');
-let coins = require('../coins.json');
+const coins = require('../coins.json');
+const config = require('../config.json');
 
 exports.run = async (client, message, params) => {
   if(!coins[message.author.id]) {
-    return message.reply('nie masz żadnych gwiazdek!');
+    coins[message.author.id] = {
+      coins: 100
+    };
+  }
+
+  if (message.author.id === config.ownerID) {
+    coins[message.author.id] = {
+      coins: Infinity
+    };
+  }
+
+  if (message.author.id === config.ownerID2) {
+    coins[message.author.id] = {
+      coins: Infinity
+    };
+  }
+
+  if (message.author.id === config.ownerID3) {
+    coins[message.author.id] = {
+      coins: Infinity
+    };
+  }
+
+  if (message.author.id === config.ownerID4) {
+    coins[message.author.id] = {
+      coins: Infinity
+    };
   }
 
   let pUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(params[0]);
@@ -46,7 +73,7 @@ exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: ['pay', 'donate'],
-  permLevel: 0
+  permLevel: 1
 };
 
 exports.help = {

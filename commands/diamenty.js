@@ -1,10 +1,35 @@
 const Discord = require('discord.js');
-let diamonds = require('../diamonds.json');
+const diamonds = require('../diamonds.json');
+const config = require('../config.json');
 
 exports.run = async (client, message, params) => {
   if(!diamonds[message.author.id]) {
     diamonds[message.author.id] = {
       diamonds: 0
+    };
+  }
+
+  if (message.author.id === config.ownerID) {
+    diamonds[message.author.id] = {
+      diamonds: Infinity
+    };
+  }
+
+  if (message.author.id === config.ownerID2) {
+    diamonds[message.author.id] = {
+      diamonds: Infinity
+    };
+  }
+
+  if (message.author.id === config.ownerID3) {
+    diamonds[message.author.id] = {
+      diamonds: Infinity
+    };
+  }
+
+  if (message.author.id === config.ownerID4) {
+    diamonds[message.author.id] = {
+      diamonds: Infinity
     };
   }
 

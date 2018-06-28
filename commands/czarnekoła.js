@@ -1,10 +1,35 @@
 const Discord = require('discord.js');
-let blackorbs = require('../blackorbs.json');
+const blackorbs = require('../blackorbs.json');
+const config = require('../config.json');
 
 exports.run = async (client, message, params) => {
   if(!blackorbs[message.author.id]) {
     blackorbs[message.author.id] = {
       blackorbs: 0
+    };
+  }
+
+  if (message.author.id === config.ownerID) {
+    blackorbs[message.author.id] = {
+      blackorbs: Infinity
+    };
+  }
+
+  if (message.author.id === config.ownerID2) {
+    blackorbs[message.author.id] = {
+      blackorbs: Infinity
+    };
+  }
+
+  if (message.author.id === config.ownerID3) {
+    blackorbs[message.author.id] = {
+      blackorbs: Infinity
+    };
+  }
+
+  if (message.author.id === config.ownerID4) {
+    blackorbs[message.author.id] = {
+      blackorbs: Infinity
     };
   }
 

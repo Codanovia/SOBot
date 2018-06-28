@@ -45,15 +45,30 @@ client.reload = command => {
   });
 };
 
-client.permLevel = message => {
+client.elevation = message => {
   /* This function should resolve to an ELEVATION level which
      is then sent to the command handler for verification*/
-  let permLevel = 0;
+  let permLevel = 1;
+  const banned_role = message.guild.roles.find('name', config.bannedRoleName);
+  if (banned_role && message.member.roles.has(banned_role.id)) permLevel = 0;
   const mod_role = message.guild.roles.find('name', config.modRoleName);
   if (mod_role && message.member.roles.has(mod_role.id)) permLevel = 2;
+  const mod_role2 = message.guild.roles.find('name', config.modRoleName2);
+  if (mod_role2 && message.member.roles.has(mod_role2.id)) permLevel = 2;
   const admin_role = message.guild.roles.find('name', config.adminRoleName);
   if (admin_role && message.member.roles.has(admin_role.id)) permLevel = 3;
+  const admin_role2 = message.guild.roles.find('name', config.adminRoleName2);
+  if (admin_role2 && message.member.roles.has(admin_role2.id)) permLevel = 3;
+  const admin_role3 = message.guild.roles.find('name', config.adminRoleName3);
+  if (admin_role3 && message.member.roles.has(admin_role3.id)) permLevel = 3;
+  const admin_role4 = message.guild.roles.find('name', config.adminRoleName4);
+  if (admin_role4 && message.member.roles.has(admin_role4.id)) permLevel = 3;
+  const admin_role5 = message.guild.roles.find('name', config.adminRoleName5);
+  if (admin_role5 && message.member.roles.has(admin_role5.id)) permLevel = 3;
   if (message.author.id === config.ownerID) permLevel = 4;
+  if (message.author.id === config.ownerID2) permLevel = 4;
+  if (message.author.id === config.ownerID3) permLevel = 4;
+  if (message.author.id === config.ownerID4) permLevel = 4;
   return permLevel;
 };
 

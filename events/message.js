@@ -6,7 +6,7 @@ module.exports = message => {
 
   const command = message.content.split(' ')[0].slice(config.prefix.length);
   const params = message.content.split(' ').slice(1);
-  const perms = client.permLevel(message);
+  const perms = client.elevation(message);
   let cmd;
   if (client.commands.has(command)) {
     cmd = client.commands.get(command);
