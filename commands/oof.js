@@ -25,6 +25,6 @@ exports.conf = {
 
 exports.help = {
   name: "oof",
-  description: "Banuje użytkownika piszącego tę komendę",
+  description: "Wyrzuca użytkownika piszącego tę komendę",
   usage: "oof"
 };
