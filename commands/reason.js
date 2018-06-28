@@ -40,6 +40,6 @@ exports.conf = {
 
 exports.help = {
   name: 'reason',
-  description: 'Edytuje powód dokonania działania moderacyjnego (ostrzeżenie, ban lub unban).',
+  description: 'Edytuje powód dokonania działania moderacyjnego.',
   usage: 'reason (numer przypadku) (nowy powód)'
 };
