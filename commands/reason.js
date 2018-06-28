@@ -27,7 +27,7 @@ exports.run = async (client, message, params) => {
     modlog.fetchMessage(caseLog.id).then(logMsg => {
       const embed = logMsg.embeds[0];
       embedSan(embed);
-      embed.description = embed.description.replace(`Oczekuję wkładu moderatora. Użyj ${config.prefix}reason ${caseNumber} <powód>.`, newReason);
+      embed.description = embed.description.replace(`brak`, newReason);
       logMsg.edit({embed});
     });
   });
