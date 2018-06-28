@@ -7,12 +7,14 @@ exports.run = async (client, message, params) => {
   const modlog = client.channels.find('name', 'ogłoszenia')
   if (!user) return message.reply('musisz podać nazwę użytkownika którego chcesz odbanować.').catch(console.error);
   message.guild.unban(user);
-  user.send('Mamy świetną nowinę! Właśnie cię odbanowano na najlepszym serwerze Czacior! Łap zaproszenie i się ciesz: https://discord.gg/Gew6cRE :smile:');
+  message.reply(`pomyślnie odbanowano użytkownika ${user}`);
+  user.send('Mamy świetną nowinę! Właśnie cię odbanowano na najlepszym serwerze Czacior! Łap zaproszenie i się ciesz: https://discord.gg/XWCxeUZ :smile:');
+
   const embed = new RichEmbed()
   .setAuthor('Czacior - ostrzeżenia i bany', 'https://i.imgur.com/zNC67j6.png')
   .setColor([0, 255, 0])
   .setTimestamp()
-  .setDescription(`**Działanie:** Unban\n**Wyznaczony użytkownik:** ${user.tag}\n**Odpowiedzialny moderator:** ${message.author}\n**Powód:** ${reason}`)
+  .setDescription(`**Działanie:** Unban\n**Wyznaczony użytkownik:** ${user}\n**Odpowiedzialny moderator:** ${message.author}\n**Powód:** ${reason}`)
   .setFooter("https://i.imgur.com/zNC67j6.png");
   return client.channels.get(modlog.id).send({embed});
 };

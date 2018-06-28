@@ -9,14 +9,16 @@ exports.run = async (client, message, params) => {
   const modlog = client.channels.find('name', 'ogłoszenia');
   const caseNum = await caseNumber(client, modlog);
   if (message.mentions.users.size < 1) return message.reply('musisz napisać kogo chcesz wyrzucić.').catch(console.error);
-  message.guild.member(user).kick();
-
   const reason = params.splice(1, params.length).join(' ') || 'brak';
+  user.send(`Zostałeś wyrzucony z serwera za ${reason}! Ale spokojnie, możesz wrócić na serwer w każdej w chwili klikając na ten link: https://discord.gg/XWCxeUZ :smiley:`);
+  message.guild.member(user).kick();
+  message.reply(`pomyślnie wyrzucono użytkownika ${user}`);
+
   const embed = new RichEmbed()
   .setAuthor('Czacior - ostrzeżenia i bany', 'https://i.imgur.com/zNC67j6.png')
   .setColor([232, 44, 12])
   .setTimestamp()
-  .setDescription(`**Działanie:** Wyrzucenie z serwera\n**Karany:** ${user.tag}\n**Odpowiedzialny moderator:** ${message.author.tag}\n**Powód:** ${reason}`)
+  .setDescription(`**Działanie:** Wyrzucenie z serwera\n**Karany:** ${user}\n**Odpowiedzialny moderator:** ${message.author}\n**Powód:** ${reason}`)
   .setFooter(`Przypadek ${caseNum}`, "https://i.imgur.com/zNC67j6.png");
   return client.channels.get(modlog.id).send({embed});
 };
