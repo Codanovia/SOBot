@@ -8,7 +8,7 @@ exports.run = async (client, message, params) => {
   if (!user) return message.reply('musisz podać nazwę użytkownika którego chcesz odbanować.').catch(console.error);
   message.guild.unban(user);
   message.reply(`pomyślnie odbanowano użytkownika ${user}`);
-  user.send('Mamy świetną nowinę! Właśnie cię odbanowano na najlepszym serwerze Czacior! Łap zaproszenie i się ciesz: https://discord.gg/XWCxeUZ :smile:');
+  //user.send('Mamy świetną nowinę! Właśnie cię odbanowano na najlepszym serwerze Czacior! Łap zaproszenie i się ciesz: https://discord.gg/XWCxeUZ :smile:'); (may add in public bot version)
 
   const embed = new RichEmbed()
   .setAuthor('Czacior - ostrzeżenia i bany', 'https://i.imgur.com/zNC67j6.png')
