@@ -14,8 +14,7 @@ exports.run = async (client, message, params) => {
   .setAuthor('Czacior - ostrzeżenia i bany', 'https://i.imgur.com/zNC67j6.png')
   .setColor([0, 255, 0])
   .setTimestamp()
-  .setDescription(`**Działanie:** Unban\n**Wyznaczony użytkownik:** ${user}\n**Odpowiedzialny moderator:** ${message.author}\n**Powód:** ${reason}`)
-  .setFooter("https://i.imgur.com/zNC67j6.png");
+  .setDescription(`**Działanie:** Unban\n**Wyznaczony użytkownik:** ${user}\n**Odpowiedzialny moderator:** ${message.author}\n**Powód:** ${reason}`);
   return client.channels.get(modlog.id).send({embed});
 };
 
