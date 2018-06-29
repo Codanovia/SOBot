@@ -1,6 +1,8 @@
-exports.run = (client, message, params = []) => {
+exports.run = (client, message, params) => {
   const guild = message.guild;
-  guild.member(message.author).addRole('396704315898724353');
+  const pl = guild.roles.find('name', 'Polski');
+  if (message.member.roles.has(pl.id)) return message.reply(`już posiadasz tę rolę!`);
+  guild.member(message.author).addRole(pl.id);
 };
 
 exports.conf = {
