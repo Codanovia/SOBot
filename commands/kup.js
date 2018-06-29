@@ -76,6 +76,7 @@ exports.run = async (client, message, params) => {
   const bRole39 = message.guild.roles.find('name', bRoles.bRole39.name);
   const bRole40 = message.guild.roles.find('name', bRoles.bRole40.name);
   const bRole41 = message.guild.roles.find('name', bRoles.bRole41.name);
+  const bRole42 = message.guild.roles.find('name', bRoles.bRole42.name);
 
   let sCoins = coins[message.author.id].coins;
   if (!role) return message.reply('musisz napisać jaką rolę chcesz kupić.');
@@ -640,7 +641,24 @@ exports.run = async (client, message, params) => {
       if (err) console.error(err)
     });
   }
-  else return message.reply('wpisana przez ciebie rola jest nie do kupienia.');
+  else if (role === bRole42) {
+    let pCoins = coins[bRoles.bRole42.sellerID].coins;
+    if (message.member.roles.has(bRole42.id)) return message.reply(`już posiadasz tę rolę!`);
+    if (sCoins < bRoles.bRole42.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
+    coins[message.author.id] = {
+      coins: sCoins - parseInt(bRoles.bRole42.cost)
+    };
+    coins[bRoles.bRole42.sellerID] = {
+      coins: pCoins + parseInt(bRoles.bRole42.cost)
+    };
+    message.guild.member(message.author).addRole(bRole42.id);
+    message.reply(`pomyślnie zakupiono rolę **${bRole42.name}**`);
+
+    fs.writeFile('./coins.json', JSON.stringify(coins), (err) => {
+      if (err) console.error(err)
+    });
+  }
+  else return message.reply('ta rola jest nie do kupienia.');
 };
 
 exports.conf = {
