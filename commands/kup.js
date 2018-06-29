@@ -2,6 +2,7 @@ const fs = require('fs');
 const bRoles = require('../buyroles.json');
 const coins = require('../coins.json');
 const config = require('../config.json');
+const diamonds = require('../diamonds.json');
 
 exports.run = async (client, message, params) => {
   if(!coins[message.author.id]) {
@@ -77,8 +78,21 @@ exports.run = async (client, message, params) => {
   const bRole40 = message.guild.roles.find('name', bRoles.bRole40.name);
   const bRole41 = message.guild.roles.find('name', bRoles.bRole41.name);
   const bRole42 = message.guild.roles.find('name', bRoles.bRole42.name);
+  const bRole43 = message.guild.roles.find('name', bRoles.bRole43.name);
+  const bRole44 = message.guild.roles.find('name', bRoles.bRole44.name);
+  const bRole45 = message.guild.roles.find('name', bRoles.bRole45.name);
+  const bRole46 = message.guild.roles.find('name', bRoles.bRole46.name);
+  const bRole47 = message.guild.roles.find('name', bRoles.bRole47.name);
+  const bRole48 = message.guild.roles.find('name', bRoles.bRole48.name);
+  const bRole49 = message.guild.roles.find('name', bRoles.bRole49.name);
+  const bRole50 = message.guild.roles.find('name', bRoles.bRole50.name);
+  const bRole51 = message.guild.roles.find('name', bRoles.bRole51.name);
+  const bRole52 = message.guild.roles.find('name', bRoles.bRole52.name);
+  const bRole53 = message.guild.roles.find('name', bRoles.bRole53.name);
+  const bRole54 = message.guild.roles.find('name', bRoles.bRole54.name);
 
   let sCoins = coins[message.author.id].coins;
+  let sDiamonds = diamonds[message.author.id].diamonds;
   if (!role) return message.reply('musisz napisać jaką rolę chcesz kupić.');
   if (role === bRole1) {
     if (message.member.roles.has(bRole1.id)) return message.reply(`już posiadasz tę rolę!`);
@@ -658,7 +672,175 @@ exports.run = async (client, message, params) => {
       if (err) console.error(err)
     });
   }
-  else return message.reply('ta rola jest nie do kupienia.');
+  else if (role === bRole43) {
+    if (message.member.roles.has(bRole43.id)) return message.reply(`już posiadasz tę rolę!`);
+    if (sDiamonds < 100000) return message.reply(`nie masz wymaganej liczby diamentów do odblokowania możliwości zakupu tej roli!`)
+    if (sCoins < bRoles.bRole43.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
+    coins[message.author.id] = {
+      coins: sCoins - parseInt(bRoles.bRole43.cost)
+    };
+    message.guild.member(message.author).addRole(bRole43.id);
+    message.reply(`pomyślnie zakupiono rolę **${bRole43.name}**`);
+
+    fs.writeFile('./coins.json', JSON.stringify(coins), (err) => {
+      if (err) console.error(err)
+    });
+  }
+  else if (role === bRole44) {
+    if (message.member.roles.has(bRole44.id)) return message.reply(`już posiadasz tę rolę!`);
+    if (sDiamonds < 100000) return message.reply(`nie masz wymaganej liczby diamentów do odblokowania możliwości zakupu tej roli!`)
+    if (sCoins < bRoles.bRole44.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
+    coins[message.author.id] = {
+      coins: sCoins - parseInt(bRoles.bRole44.cost)
+    };
+    message.guild.member(message.author).addRole(bRole44.id);
+    message.reply(`pomyślnie zakupiono rolę **${bRole44.name}**`);
+
+    fs.writeFile('./coins.json', JSON.stringify(coins), (err) => {
+      if (err) console.error(err)
+    });
+  }
+  else if (role === bRole45) {
+    if (message.member.roles.has(bRole45.id)) return message.reply(`już posiadasz tę rolę!`);
+    if (sDiamonds < 100000) return message.reply(`nie masz wymaganej liczby diamentów do odblokowania możliwości zakupu tej roli!`)
+    if (sCoins < bRoles.bRole45.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
+    coins[message.author.id] = {
+      coins: sCoins - parseInt(bRoles.bRole45.cost)
+    };
+    message.guild.member(message.author).addRole(bRole45.id);
+    message.reply(`pomyślnie zakupiono rolę **${bRole45.name}**`);
+
+    fs.writeFile('./coins.json', JSON.stringify(coins), (err) => {
+      if (err) console.error(err)
+    });
+  }
+  else if (role === bRole46) {
+    if (message.member.roles.has(bRole46.id)) return message.reply(`już posiadasz tę rolę!`);
+    if (sDiamonds < 100000) return message.reply(`nie masz wymaganej liczby diamentów do odblokowania możliwości zakupu tej roli!`)
+    if (sCoins < bRoles.bRole46.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
+    coins[message.author.id] = {
+      coins: sCoins - parseInt(bRoles.bRole46.cost)
+    };
+    message.guild.member(message.author).addRole(bRole46.id);
+    message.reply(`pomyślnie zakupiono rolę **${bRole46.name}**`);
+
+    fs.writeFile('./coins.json', JSON.stringify(coins), (err) => {
+      if (err) console.error(err)
+    });
+  }
+  else if (role === bRole47) {
+    if (message.member.roles.has(bRole47.id)) return message.reply(`już posiadasz tę rolę!`);
+    if (sDiamonds < 100000) return message.reply(`nie masz wymaganej liczby diamentów do odblokowania możliwości zakupu tej roli!`)
+    if (sCoins < bRoles.bRole47.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
+    coins[message.author.id] = {
+      coins: sCoins - parseInt(bRoles.bRole47.cost)
+    };
+    message.guild.member(message.author).addRole(bRole47.id);
+    message.reply(`pomyślnie zakupiono rolę **${bRole47.name}**`);
+
+    fs.writeFile('./coins.json', JSON.stringify(coins), (err) => {
+      if (err) console.error(err)
+    });
+  }
+  else if (role === bRole48) {
+    if (message.member.roles.has(bRole48.id)) return message.reply(`już posiadasz tę rolę!`);
+    if (sDiamonds < 100000) return message.reply(`nie masz wymaganej liczby diamentów do odblokowania możliwości zakupu tej roli!`)
+    if (sCoins < bRoles.bRole48.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
+    coins[message.author.id] = {
+      coins: sCoins - parseInt(bRoles.bRole48.cost)
+    };
+    message.guild.member(message.author).addRole(bRole48.id);
+    message.reply(`pomyślnie zakupiono rolę **${bRole48.name}**`);
+
+    fs.writeFile('./coins.json', JSON.stringify(coins), (err) => {
+      if (err) console.error(err)
+    });
+  }
+  else if (role === bRole49) {
+    if (message.member.roles.has(bRole49.id)) return message.reply(`już posiadasz tę rolę!`);
+    if (sDiamonds < 100000) return message.reply(`nie masz wymaganej liczby diamentów do odblokowania możliwości zakupu tej roli!`)
+    if (sCoins < bRoles.bRole49.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
+    coins[message.author.id] = {
+      coins: sCoins - parseInt(bRoles.bRole49.cost)
+    };
+    message.guild.member(message.author).addRole(bRole49.id);
+    message.reply(`pomyślnie zakupiono rolę **${bRole49.name}**`);
+
+    fs.writeFile('./coins.json', JSON.stringify(coins), (err) => {
+      if (err) console.error(err)
+    });
+  }
+  else if (role === bRole50) {
+    if (message.member.roles.has(bRole50.id)) return message.reply(`już posiadasz tę rolę!`);
+    if (sDiamonds < 100000) return message.reply(`nie masz wymaganej liczby diamentów do odblokowania możliwości zakupu tej roli!`)
+    if (sCoins < bRoles.bRole50.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
+    coins[message.author.id] = {
+      coins: sCoins - parseInt(bRoles.bRole50.cost)
+    };
+    message.guild.member(message.author).addRole(bRole50.id);
+    message.reply(`pomyślnie zakupiono rolę **${bRole50.name}**`);
+
+    fs.writeFile('./coins.json', JSON.stringify(coins), (err) => {
+      if (err) console.error(err)
+    });
+  }
+  else if (role === bRole51) {
+    if (message.member.roles.has(bRole51.id)) return message.reply(`już posiadasz tę rolę!`);
+    if (sDiamonds < 100000) return message.reply(`nie masz wymaganej liczby diamentów do odblokowania możliwości zakupu tej roli!`)
+    if (sCoins < bRoles.bRole51.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
+    coins[message.author.id] = {
+      coins: sCoins - parseInt(bRoles.bRole51.cost)
+    };
+    message.guild.member(message.author).addRole(bRole51.id);
+    message.reply(`pomyślnie zakupiono rolę **${bRole51.name}**`);
+
+    fs.writeFile('./coins.json', JSON.stringify(coins), (err) => {
+      if (err) console.error(err)
+    });
+  }
+  else if (role === bRole52) {
+    if (message.member.roles.has(bRole52.id)) return message.reply(`już posiadasz tę rolę!`);
+    if (sDiamonds < 100000) return message.reply(`nie masz wymaganej liczby diamentów do odblokowania możliwości zakupu tej roli!`)
+    if (sCoins < bRoles.bRole52.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
+    coins[message.author.id] = {
+      coins: sCoins - parseInt(bRoles.bRole52.cost)
+    };
+    message.guild.member(message.author).addRole(bRole52.id);
+    message.reply(`pomyślnie zakupiono rolę **${bRole52.name}**`);
+
+    fs.writeFile('./coins.json', JSON.stringify(coins), (err) => {
+      if (err) console.error(err)
+    });
+  }
+  else if (role === bRole53) {
+    if (message.member.roles.has(bRole53.id)) return message.reply(`już posiadasz tę rolę!`);
+    if (sDiamonds < 100000) return message.reply(`nie masz wymaganej liczby diamentów do odblokowania możliwości zakupu tej roli!`)
+    if (sCoins < bRoles.bRole53.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
+    coins[message.author.id] = {
+      coins: sCoins - parseInt(bRoles.bRole53.cost)
+    };
+    message.guild.member(message.author).addRole(bRole53.id);
+    message.reply(`pomyślnie zakupiono rolę **${bRole53.name}**`);
+
+    fs.writeFile('./coins.json', JSON.stringify(coins), (err) => {
+      if (err) console.error(err)
+    });
+  }
+  else if (role === bRole54) {
+    if (message.member.roles.has(bRole54.id)) return message.reply(`już posiadasz tę rolę!`);
+    if (sDiamonds < 100000) return message.reply(`nie masz wymaganej liczby diamentów do odblokowania możliwości zakupu tej roli!`)
+    if (sCoins < bRoles.bRole54.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
+    coins[message.author.id] = {
+      coins: sCoins - parseInt(bRoles.bRole54.cost)
+    };
+    message.guild.member(message.author).addRole(bRole54.id);
+    message.reply(`pomyślnie zakupiono rolę **${bRole54.name}**`);
+
+    fs.writeFile('./coins.json', JSON.stringify(coins), (err) => {
+      if (err) console.error(err)
+    });
+  }
+  else return message.reply(`ta rola jest nie do kupienia.`);
 };
 
 exports.conf = {
