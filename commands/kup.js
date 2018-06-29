@@ -342,13 +342,14 @@ exports.run = async (client, message, params) => {
     });
   }
   else if (role === bRole23) {
+    let pCoins = coins[bRoles.bRole23.sellerID].coins;
     if (message.member.roles.has(bRole23.id)) return message.reply(`już posiadasz tę rolę!`);
     if (sCoins < bRoles.bRole23.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
     coins[message.author.id] = {
       coins: sCoins - parseInt(bRoles.bRole23.cost)
     };
     coins[bRoles.bRole23.sellerID] = {
-      coins: sCoins + parseInt(bRoles.bRole23.cost)
+      coins: pCoins + parseInt(bRoles.bRole23.cost)
     };
     message.guild.member(message.author).addRole(bRole23.id);
     message.reply(`pomyślnie zakupiono rolę **${bRole23.name}**`);
@@ -358,13 +359,14 @@ exports.run = async (client, message, params) => {
     });
   }
   else if (role === bRole24) {
+    let pCoins = coins[bRoles.bRole24.sellerID].coins;
     if (message.member.roles.has(bRole24.id)) return message.reply(`już posiadasz tę rolę!`);
     if (sCoins < bRoles.bRole24.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
     coins[message.author.id] = {
       coins: sCoins - parseInt(bRoles.bRole24.cost)
     };
     coins[bRoles.bRole24.sellerID] = {
-      coins: sCoins + parseInt(bRoles.bRole24.cost)
+      coins: pCoins + parseInt(bRoles.bRole24.cost)
     };
     message.guild.member(message.author).addRole(bRole24.id);
     message.reply(`pomyślnie zakupiono rolę **${bRole24.name}**`);
@@ -400,13 +402,14 @@ exports.run = async (client, message, params) => {
     });
   }
   else if (role === bRole27) {
+    let pCoins = coins[bRoles.bRole27.sellerID].coins;
     if (message.member.roles.has(bRole27.id)) return message.reply(`już posiadasz tę rolę!`);
     if (sCoins < bRoles.bRole27.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
     coins[message.author.id] = {
       coins: sCoins - parseInt(bRoles.bRole27.cost)
     };
     coins[bRoles.bRole27.sellerID] = {
-      coins: sCoins + parseInt(bRoles.bRole27.cost)
+      coins: pCoins + parseInt(bRoles.bRole27.cost)
     };
     message.guild.member(message.author).addRole(bRole27.id);
     message.reply(`pomyślnie zakupiono rolę **${bRole27.name}**`);
@@ -416,13 +419,14 @@ exports.run = async (client, message, params) => {
     });
   }
   else if (role === bRole28) {
+    let pCoins = coins[bRoles.bRole28.sellerID].coins;
     if (message.member.roles.has(bRole28.id)) return message.reply(`już posiadasz tę rolę!`);
     if (sCoins < bRoles.bRole28.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
     coins[message.author.id] = {
       coins: sCoins - parseInt(bRoles.bRole28.cost)
     };
     coins[bRoles.bRole28.sellerID] = {
-      coins: sCoins + parseInt(bRoles.bRole28.cost)
+      coins: pCoins + parseInt(bRoles.bRole28.cost)
     };
     message.guild.member(message.author).addRole(bRole28.id);
     message.reply(`pomyślnie zakupiono rolę **${bRole28.name}**`);
@@ -432,13 +436,14 @@ exports.run = async (client, message, params) => {
     });
   }
   else if (role === bRole29) {
+    let pCoins = coins[bRoles.bRole29.sellerID].coins;
     if (message.member.roles.has(bRole29.id)) return message.reply(`już posiadasz tę rolę!`);
     if (sCoins < bRoles.bRole29.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
     coins[message.author.id] = {
       coins: sCoins - parseInt(bRoles.bRole29.cost)
     };
     coins[bRoles.bRole29.sellerID] = {
-      coins: sCoins + parseInt(bRoles.bRole29.cost)
+      coins: pCoins + parseInt(bRoles.bRole29.cost)
     };
     message.guild.member(message.author).addRole(bRole29.id);
     message.reply(`pomyślnie zakupiono rolę **${bRole29.name}**`);
@@ -461,13 +466,14 @@ exports.run = async (client, message, params) => {
     });
   }
   else if (role === bRole31) {
+    let pCoins = coins[bRoles.bRole31.sellerID].coins;
     if (message.member.roles.has(bRole31.id)) return message.reply(`już posiadasz tę rolę!`);
     if (sCoins < bRoles.bRole31.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
     coins[message.author.id] = {
       coins: sCoins - parseInt(bRoles.bRole31.cost)
     };
     coins[bRoles.bRole31.sellerID] = {
-      coins: sCoins + parseInt(bRoles.bRole31.cost)
+      coins: pCoins + parseInt(bRoles.bRole31.cost)
     };
     message.guild.member(message.author).addRole(bRole31.id);
     message.reply(`pomyślnie zakupiono rolę **${bRole31.name}**`);
@@ -477,13 +483,14 @@ exports.run = async (client, message, params) => {
     });
   }
   else if (role === bRole32) {
+    let pCoins = coins[bRoles.bRole32.sellerID].coins;
     if (message.member.roles.has(bRole32.id)) return message.reply(`już posiadasz tę rolę!`);
     if (sCoins < bRoles.bRole32.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
     coins[message.author.id] = {
       coins: sCoins - parseInt(bRoles.bRole32.cost)
     };
     coins[bRoles.bRole32.sellerID] = {
-      coins: sCoins + parseInt(bRoles.bRole32.cost)
+      coins: pCoins + parseInt(bRoles.bRole32.cost)
     };
     message.guild.member(message.author).addRole(bRole32.id);
     message.reply(`pomyślnie zakupiono rolę **${bRole32.name}**`);
@@ -493,13 +500,14 @@ exports.run = async (client, message, params) => {
     });
   }
   else if (role === bRole33) {
+    let pCoins = coins[bRoles.bRole33.sellerID].coins;
     if (message.member.roles.has(bRole33.id)) return message.reply(`już posiadasz tę rolę!`);
     if (sCoins < bRoles.bRole33.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
     coins[message.author.id] = {
       coins: sCoins - parseInt(bRoles.bRole33.cost)
     };
     coins[bRoles.bRole33.sellerID] = {
-      coins: sCoins + parseInt(bRoles.bRole33.cost)
+      coins: pCoins + parseInt(bRoles.bRole33.cost)
     };
     message.guild.member(message.author).addRole(bRole33.id);
     message.reply(`pomyślnie zakupiono rolę **${bRole33.name}**`);
@@ -508,27 +516,28 @@ exports.run = async (client, message, params) => {
       if (err) console.error(err)
     });
   }
-  else if (role === bRole30) {
-    if (message.member.roles.has(bRole30.id)) return message.reply(`już posiadasz tę rolę!`);
-    if (sCoins < bRoles.bRole30.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
+  else if (role === bRole34) {
+    if (message.member.roles.has(bRole34.id)) return message.reply(`już posiadasz tę rolę!`);
+    if (sCoins < bRoles.bRole34.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
     coins[message.author.id] = {
-      coins: sCoins - parseInt(bRoles.bRole30.cost)
+      coins: sCoins - parseInt(bRoles.bRole34.cost)
     };
-    message.guild.member(message.author).addRole(bRole30.id);
-    message.reply(`pomyślnie zakupiono rolę **${bRole30.name}**`);
+    message.guild.member(message.author).addRole(bRole34.id);
+    message.reply(`pomyślnie zakupiono rolę **${bRole34.name}**`);
 
     fs.writeFile('./coins.json', JSON.stringify(coins), (err) => {
       if (err) console.error(err)
     });
   }
   else if (role === bRole35) {
+    let pCoins = coins[bRoles.bRole35.sellerID].coins;
     if (message.member.roles.has(bRole35.id)) return message.reply(`już posiadasz tę rolę!`);
     if (sCoins < bRoles.bRole35.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
     coins[message.author.id] = {
       coins: sCoins - parseInt(bRoles.bRole35.cost)
     };
     coins[bRoles.bRole35.sellerID] = {
-      coins: sCoins + parseInt(bRoles.bRole35.cost)
+      coins: pCoins + parseInt(bRoles.bRole35.cost)
     };
     message.guild.member(message.author).addRole(bRole35.id);
     message.reply(`pomyślnie zakupiono rolę **${bRole35.name}**`);
@@ -538,13 +547,14 @@ exports.run = async (client, message, params) => {
     });
   }
   else if (role === bRole36) {
+    let pCoins = coins[bRoles.bRole36.sellerID].coins;
     if (message.member.roles.has(bRole36.id)) return message.reply(`już posiadasz tę rolę!`);
     if (sCoins < bRoles.bRole36.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
     coins[message.author.id] = {
       coins: sCoins - parseInt(bRoles.bRole36.cost)
     };
     coins[bRoles.bRole36.sellerID] = {
-      coins: sCoins + parseInt(bRoles.bRole36.cost)
+      coins: pCoins + parseInt(bRoles.bRole36.cost)
     };
     message.guild.member(message.author).addRole(bRole36.id);
     message.reply(`pomyślnie zakupiono rolę **${bRole36.name}**`);
@@ -554,13 +564,14 @@ exports.run = async (client, message, params) => {
     });
   }
   else if (role === bRole37) {
+    let pCoins = coins[bRoles.bRole37.sellerID].coins;
     if (message.member.roles.has(bRole37.id)) return message.reply(`już posiadasz tę rolę!`);
     if (sCoins < bRoles.bRole37.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
     coins[message.author.id] = {
       coins: sCoins - parseInt(bRoles.bRole37.cost)
     };
     coins[bRoles.bRole37.sellerID] = {
-      coins: sCoins + parseInt(bRoles.bRole37.cost)
+      coins: pCoins + parseInt(bRoles.bRole37.cost)
     };
     message.guild.member(message.author).addRole(bRole37.id);
     message.reply(`pomyślnie zakupiono rolę **${bRole37.name}**`);
@@ -596,13 +607,14 @@ exports.run = async (client, message, params) => {
     });
   }
   else if (role === bRole40) {
+    let pCoins = coins[bRoles.bRole40.sellerID].coins;
     if (message.member.roles.has(bRole40.id)) return message.reply(`już posiadasz tę rolę!`);
     if (sCoins < bRoles.bRole40.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
     coins[message.author.id] = {
       coins: sCoins - parseInt(bRoles.bRole40.cost)
     };
     coins[bRoles.bRole40.sellerID] = {
-      coins: sCoins + parseInt(bRoles.bRole40.cost)
+      coins: pCoins + parseInt(bRoles.bRole40.cost)
     };
     message.guild.member(message.author).addRole(bRole40.id);
     message.reply(`pomyślnie zakupiono rolę **${bRole40.name}**`);
@@ -612,13 +624,14 @@ exports.run = async (client, message, params) => {
     });
   }
   else if (role === bRole41) {
+    let pCoins = coins[bRoles.bRole41.sellerID].coins;
     if (message.member.roles.has(bRole41.id)) return message.reply(`już posiadasz tę rolę!`);
     if (sCoins < bRoles.bRole41.cost) return message.reply(`nie stać ciebie na tak drogą rolę! Może wybierz jakąś tańszą? :thinking:`);
     coins[message.author.id] = {
       coins: sCoins - parseInt(bRoles.bRole41.cost)
     };
     coins[bRoles.bRole41.sellerID] = {
-      coins: sCoins + parseInt(bRoles.bRole41.cost)
+      coins: pCoins + parseInt(bRoles.bRole41.cost)
     };
     message.guild.member(message.author).addRole(bRole41.id);
     message.reply(`pomyślnie zakupiono rolę **${bRole41.name}**`);
