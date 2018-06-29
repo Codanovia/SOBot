@@ -78,6 +78,7 @@ exports.run = async (client, message, params) => {
   const bRole41 = message.guild.roles.find('name', bRoles.bRole41.name);
 
   let sCoins = coins[message.author.id].coins;
+  if (!role) return message.reply('musisz napisać jaką rolę chcesz kupić.');
   if (role === bRole1) {
     if (message.member.roles.has(bRole1.id)) return message.reply(`już posiadasz tę rolę!`);
     message.guild.member(message.author).addRole(bRole1.id);
