@@ -626,6 +626,7 @@ exports.run = async (client, message, params) => {
       if (err) console.error(err)
     });
   }
+  else return message.reply('wpisana przez ciebie rola jest nie do kupienia.');
 };
 
 exports.conf = {
