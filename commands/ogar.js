@@ -7,7 +7,7 @@ exports.run = (client, message, params) => {
   ogar[4] = 'https://cdn.discordapp.com/attachments/461251813178343449/461622452301332490/zartysieskonczyly.png';
   ogar[5] = 'https://cdn.discordapp.com/attachments/461251813178343449/461625432840863744/unknown.png';
   ogar[6] = 'https://cdn.discordapp.com/attachments/461251813178343449/462329323328634910/ogar6.jpg'
-  
+
   message.channel.send(ogar[Math.floor(Math.random()*ogar.length)]);
 };
 
@@ -20,6 +20,6 @@ exports.conf = {
 
 exports.help = {
   name: "ogar",
-  description: "Wysyła zdjęcie z pingwinem sierżantem, żeby ten ogarnął wszystkich",
+  description: "Wysyła zdjęcie z pingwinem sierżantem",
   usage: "ogar"
 };

@@ -28,7 +28,7 @@ exports.run = (client, message, params) => {
   members[13] = 'marcin6200';
   members[14] = 'QRX';
   members[15] = 'P18plus';
-  members[16] = 'Star Butterfly';
+  members[16] = 'Dexter !';
   members[17] = 'Novorossia HD Mapper';
   members[18] = 'vistafan12';
 

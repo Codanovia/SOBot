@@ -24,7 +24,7 @@ exports.run = async (client, message, params) => {
 };
 
 exports.conf = {
-  enabled: true,
+  enabled: false,
   guildOnly: true,
   aliases: ['wyrzuć'],
   permLevel: 2

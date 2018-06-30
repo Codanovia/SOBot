@@ -11,6 +11,6 @@ exports.conf = {
 
 exports.help = {
   name: "kebap",
-  description: "Przygotowuje świeżego, tureckiego kebapa.",
+  description: "Przygotowuje świeżego kebapa.",
   usage: "kebap"
 };
