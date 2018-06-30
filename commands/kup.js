@@ -11,6 +11,12 @@ exports.run = async (client, message, params) => {
     };
   }
 
+  if(!diamonds[message.author.id]) {
+    diamonds[message.author.id] = {
+      diamonds: 0
+    };
+  }
+
   if (message.author.id === config.ownerID) {
     coins[message.author.id] = {
       coins: Infinity
@@ -32,6 +38,29 @@ exports.run = async (client, message, params) => {
   if (message.author.id === config.ownerID4) {
     coins[message.author.id] = {
       coins: Infinity
+    };
+  }
+  if (message.author.id === config.ownerID) {
+    diamonds[message.author.id] = {
+      diamonds: Infinity
+    };
+  }
+
+  if (message.author.id === config.ownerID2) {
+    diamonds[message.author.id] = {
+      diamonds: Infinity
+    };
+  }
+
+  if (message.author.id === config.ownerID3) {
+    diamonds[message.author.id] = {
+      diamonds: Infinity
+    };
+  }
+
+  if (message.author.id === config.ownerID4) {
+    diamonds[message.author.id] = {
+      diamonds: Infinity
     };
   }
 
