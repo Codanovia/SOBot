@@ -35,8 +35,8 @@ exports.run = async (client, message, params) => {
     warns: uWarns + 1
   };
   if (uWarns === 2) {
-    guild.member(user).removeRoles([guild.roles.find('name', config.modRoleName).id, guild.roles.find('name', config.modRoleName2).id, guild.roles.find('name', config.adminRoleName).id, guild.roles.find('name', config.adminRoleName2).id, guild.roles.find('name', config.adminRoleName3).id, guild.roles.find('name', config.adminRoleName4).id, guild.roles.find('name', config.adminRoleName5).id]);
-    guild.member(user).addRole([guild.roles.find('name', config.bannedRoleName.id)]);
+    guild.member(user).removeRoles([guild.roles.find('name', config.modRoleName).id, guild.roles.find('name', config.modRoleName2).id, guild.roles.find('name', config.adminRoleName).id, guild.roles.find('name', config.adminRoleName2).id, guild.roles.find('name', config.adminRoleName3).id, guild.roles.find('name', config.adminRoleName4).id, guild.roles.find('name', config.adminRoleName5).id], 'otrzymanie dwóch ostrzeżeń w ciągu jednego tygodnia');
+    guild.member(user).addRole([guild.roles.find('name', config.bannedRoleName.id)], 'otrzymanie dwóch ostrzeżeń w ciągu jednego tygodnia');
   }
 
   if (uWarns === 8) {

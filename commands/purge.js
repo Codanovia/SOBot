@@ -12,6 +12,6 @@ exports.conf = {
 
 exports.help = {
   name: "purge",
-  description: "Usuwa wiadomości od 1 do sprzed 14 dni temu.",
+  description: "Usuwa wybraną liczbę wiadomości",
   usage: "purge (liczba wiadomości do usunięcia)"
 };

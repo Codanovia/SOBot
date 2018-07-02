@@ -14,6 +14,6 @@ exports.conf = {
 
 exports.help = {
   name: "pl",
-  description: "Przypisuje nowo-przybyłego użytkownikowi rolę Polski.",
+  description: "Przypisuje użytkownikowi rolę Polski.",
   usage: "pl"
 };

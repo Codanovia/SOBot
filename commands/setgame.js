@@ -1,13 +1,13 @@
 exports.run = (client, message, params) => {
   var result = params.join(' ');
-  if (!result) result = 'cz!help/cz!musichelp';
+  if (!result) return client.user.setActivity('cały serwer', { type: 'WATCHING' });
   client.user.setActivity(result);
 };
 
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['game'],
+  aliases: ['game', 'setactivity'],
   permLevel: 1
 };
 

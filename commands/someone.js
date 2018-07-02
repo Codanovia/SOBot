@@ -44,6 +44,6 @@ exports.conf = {
 
 exports.help = {
   name: "someone",
-  description: "I wanna play with @someone",
+  description: "@someone party with me",
   usage: "someone"
 };

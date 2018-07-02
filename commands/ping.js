@@ -14,6 +14,6 @@ exports.conf = {
 
 exports.help = {
   name: "ping",
-  description: "Klasyczna komenda ping-pong.",
+  description: "...Pong!",
   usage: "ping"
 };
