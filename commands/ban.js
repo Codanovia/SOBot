@@ -10,8 +10,8 @@ exports.run = async (client, message, params) => {
   const caseNum = await caseNumber(client, modlog);
   if (message.mentions.users.size < 1) return message.reply('musisz napisać kogo chcesz zbanować.').catch(console.error);
   const reason = params.splice(1, params.length).join(' ') || 'brak';
-  user.send(`Zostałeś zbanowany na serwerze za ${reason}! Naprawdę, jak mogłeś zrobić tak okrutną rzecz?! :rage:`)
-  message.guild.ban(user, 2);
+  user.send(`Zostałeś zbanowany na serwerze za ${reason}! Naprawdę, jak mogłeś zrobić tak okrutną rzecz?! :rage:`);
+  message.guild.ban(user, 1, reason);
   message.reply(`pomyślnie zbanowano użytkownika ${user}`);
 
   const embed = new RichEmbed()

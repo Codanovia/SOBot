@@ -9,30 +9,6 @@ exports.run = async (client, message, params) => {
     };
   }
 
-  if (message.author.id === config.ownerID) {
-    keys[message.author.id] = {
-      keys: Infinity
-    };
-  }
-
-  if (message.author.id === config.ownerID2) {
-    keys[message.author.id] = {
-      keys: Infinity
-    };
-  }
-
-  if (message.author.id === config.ownerID3) {
-    keys[message.author.id] = {
-      keys: Infinity
-    };
-  }
-
-  if (message.author.id === config.ownerID4) {
-    keys[message.author.id] = {
-      keys: Infinity
-    };
-  }
-
   let uKeys = keys[message.author.id].keys;
   message.channel.send(`W tej chwili masz ${uKeys} :key:`);
 };

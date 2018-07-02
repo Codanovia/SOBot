@@ -9,30 +9,6 @@ exports.run = async (client, message, params) => {
     };
   }
 
-  if (message.author.id === config.ownerID) {
-    blackorbs[message.author.id] = {
-      blackorbs: Infinity
-    };
-  }
-
-  if (message.author.id === config.ownerID2) {
-    blackorbs[message.author.id] = {
-      blackorbs: Infinity
-    };
-  }
-
-  if (message.author.id === config.ownerID3) {
-    blackorbs[message.author.id] = {
-      blackorbs: Infinity
-    };
-  }
-
-  if (message.author.id === config.ownerID4) {
-    blackorbs[message.author.id] = {
-      blackorbs: Infinity
-    };
-  }
-
   let uBlackorbs = blackorbs[message.author.id].blackorbs;
   message.channel.send(`W tej chwili masz ${uBlackorbs} :black_circle:`);
 };

@@ -1,6 +1,6 @@
 exports.run = (client, message, params) => {
   var result = params.join(' ');
-  if (!result) result = 'cz!help';
+  if (!result) result = 'cz!help/cz!musichelp';
   client.user.setActivity(result);
 };
 

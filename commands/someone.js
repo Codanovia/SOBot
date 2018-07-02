@@ -44,6 +44,6 @@ exports.conf = {
 
 exports.help = {
   name: "someone",
-  description: "Pamiętacie ten typ wzmianki z czasów Prima Aprilis 2018? Teraz jest on tutaj w Czacior Bocie!",
+  description: "I wanna play with @someone",
   usage: "someone"
 };

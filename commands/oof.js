@@ -4,8 +4,7 @@ const {caseNumber} = require('../util/caseNumber.js')
 exports.run = async (client, message, params) => {
   const modlog = client.channels.find('name', 'ogłoszenia');
   const caseNum = await caseNumber(client, modlog);
-  message.guild.ban(message.author);
-  message.guild.unban(message.author);
+  message.guild.member(message.author).kick();
   message.author.send('Oof! Jeśli chcesz się odrodzić, to tutaj masz zaproszenie: https://discord.gg/XWCxeUZ :smiley:');
   const embed = new RichEmbed()
   .setAuthor('Czacior - ostrzeżenia i bany', 'https://i.imgur.com/zNC67j6.png')
