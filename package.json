@@ -4,8 +4,7 @@
   "description": "Bot stworzony na potrzebę serwera Czacior na Discordzie.",
   "main": "app.js",
   "engines": {
-    "node": "latest",
-    "npm": "latest"
+    "node": "8.4.0"
   },
   "repository": {
     "type": "git",
