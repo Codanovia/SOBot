@@ -86,4 +86,4 @@ client.on('error', e => {
   console.log(chalk.bgRed(e.replace(regToken, 'that was redacted')));
 });
 
-client.login(process.env.TOKEN);
+client.login(config.token);
