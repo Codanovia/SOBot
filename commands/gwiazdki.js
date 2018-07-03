@@ -9,6 +9,30 @@ exports.run = async (client, message, params) => {
     };
   }
 
+  if (message.author.id === config.ownerID) {
+   coins[message.author.id] = {
+     coins: Infinity
+   };
+ }
+
+ if (message.author.id === config.ownerID2) {
+   coins[message.author.id] = {
+     coins: Infinity
+   };
+ }
+
+ if (message.author.id === config.ownerID3) {
+   coins[message.author.id] = {
+     coins: Infinity
+   };
+ }
+
+ if (message.author.id === config.ownerID4) {
+   coins[message.author.id] = {
+     coins: Infinity
+   };
+ }
+
   let uCoins = coins[message.author.id].coins;
   message.channel.send(`W tej chwili masz ${uCoins} <:gwiazdka:424229903664414720>`);
 };

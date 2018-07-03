@@ -3,6 +3,7 @@ const {caseNumber} = require('../util/caseNumber.js');
 const {parseUser} = require('../util/parseUser.js');
 const config = require('../config.json');
 const warns = require('../warns.json');
+const fs = require('fs');
 
 exports.run = async (client, message, params) => {
   const guild = message.guild;
@@ -34,6 +35,10 @@ exports.run = async (client, message, params) => {
   warns[user.id] = {
     warns: uWarns + 1
   };
+  fs.writeFile('./warns.json', JSON.stringify(warns), (err) => {
+    if (err) console.error(err)
+  });
+
   if (uWarns === 2) {
     guild.member(user).removeRoles([guild.roles.find('name', config.modRoleName).id, guild.roles.find('name', config.modRoleName2).id, guild.roles.find('name', config.adminRoleName).id, guild.roles.find('name', config.adminRoleName2).id, guild.roles.find('name', config.adminRoleName3).id, guild.roles.find('name', config.adminRoleName4).id, guild.roles.find('name', config.adminRoleName5).id], 'otrzymanie dwóch ostrzeżeń w ciągu jednego tygodnia');
     guild.member(user).addRole([guild.roles.find('name', config.bannedRoleName.id)], 'otrzymanie dwóch ostrzeżeń w ciągu jednego tygodnia');

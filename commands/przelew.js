@@ -10,6 +10,30 @@ exports.run = async (client, message, params) => {
     };
   }
 
+  if (message.author.id === config.ownerID) {
+   coins[message.author.id] = {
+     coins: Infinity
+   };
+ }
+
+ if (message.author.id === config.ownerID2) {
+   coins[message.author.id] = {
+     coins: Infinity
+   };
+ }
+
+ if (message.author.id === config.ownerID3) {
+   coins[message.author.id] = {
+     coins: Infinity
+   };
+ }
+
+ if (message.author.id === config.ownerID4) {
+   coins[message.author.id] = {
+     coins: Infinity
+   };
+ }
+
   let pUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(params[0]);
 
   if (pUser.id === message.author.id) return message.reply('nie możesz przelać gwiazdek samemu sobie!');
