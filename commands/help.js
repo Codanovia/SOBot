@@ -3,7 +3,7 @@ exports.run = (client, message, params) => {
   if (!params[0]) {
     const commandNames = Array.from(client.commands.keys());
     const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
-    message.author.send(`= Lista komend =\n\n[Wpisz komendę ${config.prefix}help (nazwa komendy) dla szczegółów wybranej komendy. Wersja bota: 1.3.1]\n\n${client.commands.map(c => `${config.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}`).join('\n')}`, {code: 'asciidoc'});
+    message.author.send(`= Lista komend =\n\n[Wpisz komendę ${config.prefix}help (nazwa komendy) dla szczegółów wybranej komendy. Wersja bota: 1.3.2]\n\n${client.commands.map(c => `${config.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}`).join('\n')}`, {code: 'asciidoc'});
     message.reply('lista komend została wysłana na PW!');
   } else {
     let command = params[0];

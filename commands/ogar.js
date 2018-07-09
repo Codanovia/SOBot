@@ -61,6 +61,21 @@ exports.run = (client, message, params) => {
   ogar[58] = 'https://cdn.discordapp.com/attachments/461251813178343449/463417813823127618/ogarogar.png';
   ogar[59] = 'https://cdn.discordapp.com/attachments/461251813178343449/463418451638353931/ogarogar2.png';
   ogar[60] = 'https://cdn.discordapp.com/attachments/267335068609937410/463423383170842637/unknown.png';
+  ogar[61] = 'https://cdn.discordapp.com/attachments/462341106949160960/464726021095292933/cz.png';
+  ogar[62] = 'https://cdn.discordapp.com/attachments/461251813178343449/464822076541370388/unknown.png';
+  ogar[63] = 'https://cdn.discordapp.com/attachments/461251813178343449/463714889194536960/ogar_emem.png';
+  ogar[64] = 'https://cdn.discordapp.com/attachments/461251813178343449/463714473639673866/ogar_info.png';
+  ogar[65] = 'https://cdn.discordapp.com/attachments/461251813178343449/463712735184683010/ogar_7.png';
+  ogar[66] = 'https://cdn.discordapp.com/attachments/461251813178343449/463711317556199424/ogar_6.png';
+  ogar[67] = 'https://cdn.discordapp.com/attachments/461251813178343449/463709815684988928/ogar_5_poprawka.png';
+  ogar[68] = 'https://cdn.discordapp.com/attachments/461251813178343449/463707974695911444/ogar_4.png';
+  ogar[69] = 'https://cdn.discordapp.com/attachments/461251813178343449/463707642959888391/unknown.png';
+  ogar[70] = 'https://cdn.discordapp.com/attachments/461251813178343449/463707135411355678/unknown.png';
+  ogar[71] = 'https://cdn.discordapp.com/attachments/461251813178343449/463704105500672010/ogar_3.png';
+  ogar[72] = 'https://cdn.discordapp.com/attachments/461251813178343449/463703392590757908/unknown-9.png';
+  ogar[73] = 'https://cdn.discordapp.com/attachments/461251813178343449/463675926866034710/ogarpow.png';
+  ogar[74] = 'https://cdn.discordapp.com/attachments/461251813178343449/463623515757608980/ogar_2.png';
+  ogar[75] = 'https://cdn.discordapp.com/attachments/461251813178343449/463622693539938316/penguin_stock.png';
 
   message.channel.send(ogar[Math.floor(Math.random()*ogar.length)]);
 };

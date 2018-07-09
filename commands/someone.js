@@ -31,6 +31,12 @@ exports.run = (client, message, params) => {
   members[16] = 'Dexter !';
   members[17] = 'Novorossia HD Mapper';
   members[18] = 'vistafan12';
+  members[19] = 'bartekj1222';
+  memebers[20] = 'Archi';
+  members[21] = 'argax';
+  members[22] = 'LukaszM600';
+  members[23] = 'Cichy';
+  members[24] = 'tobiasz';
 
   message.channel.send(`**@someone ${emote[Math.floor(Math.random()*emote.length)]} *${members[Math.floor(Math.random()*members.length)]}***`);
 };

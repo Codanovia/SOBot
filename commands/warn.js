@@ -44,7 +44,7 @@ exports.run = async (client, message, params) => {
     guild.member(user).addRole([guild.roles.find('name', config.bannedRoleName.id)], 'otrzymanie dwóch ostrzeżeń w ciągu jednego tygodnia');
   }
 
-  if (uWarns === 8) {
+  if (uWarns === 3) {
     reason = 'otrzymanie ośmiu ostrzeżeń w ciągu jednego tygodnia';
     user.send(`Zostałeś zbanowany na serwerze za ${reason}! Naprawdę, jak mogłeś zrobić tak okrutną rzecz?! :rage:`);
     guild.ban(user, 1, reason);
