@@ -16,6 +16,7 @@
     "chalk": "^2.4.1",
     "discord.js": "^11.3.2",
     "fs": "0.0.1-security",
+    "http": "0.0.0",
     "moment": "^2.22.2",
     "node-gyp": "^3.6.2",
     "superagent": "^3.8.3"
