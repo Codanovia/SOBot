@@ -18,6 +18,9 @@ exports.run = (client, message, params) => {
   eightBall[15] = 'Może';
   eightBall[16] = 'Myślę, że nie';
   eightBall[17] = 'Spierdalaj';
+  eightBall[18] = 'Powiem ci póżniej';
+  eightBall[19] = 'Nie licz na to';
+  eightBall[20] = 'Najprawdopodobniej';
 
   message.channel.send(':8ball: :thinking:')
   .then(message => {
@@ -34,6 +37,6 @@ exports.conf = {
 
 exports.help = {
   name: "8ball",
-  description: "Pyta magicnzą kulę 8 o coś tam",
+  description: "Pyta magiczną kulę 8 o coś tam",
   usage: "8ball (pytanie)"
 };
