@@ -2,6 +2,7 @@ exports.run = (client, message, params) => {
   var placki = new Array();
   placki[0] = 'https://cdn.discordapp.com/attachments/461251813178343449/463043690332422164/Bez_tytuu.gif';
   placki[1] = 'https://cdn.discordapp.com/attachments/461251813178343449/463043445494251520/Bez_tytuu1.gif';
+  placki[2] = 'https://cdn.discordapp.com/attachments/461251813178343449/463043690332422164/Bez_tytuu.gif';
   message.channel.send(placki[Math.floor(Math.random()*placki.length)]);
 };
 
