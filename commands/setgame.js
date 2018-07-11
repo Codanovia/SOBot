@@ -1,6 +1,13 @@
 exports.run = (client, message, params) => {
   var result = params.join(' ');
-  if (!result) return client.user.setActivity('cały serwer', { type: 'WATCHING' });
+  if (!result) {
+    while (client.user.presence.status = 'online') {
+      client.user.setActivity('cz!help');
+      setTimeout(120000);
+      client.user.setActivity('cały serwer', {type: 'WATCHING'});
+      setTimeout(120000);
+    }
+  }
   client.user.setActivity(result);
 };
 
