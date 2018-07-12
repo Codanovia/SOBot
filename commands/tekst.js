@@ -12,22 +12,20 @@ exports.run = (client, message, params) => {
   memebers[9] = 'BW134';
   memebers[10] = 'SJTV';
   memebers[11] = 'Damianradek';
-  memebers[12] = 'anon';
-  memebers[13] = 'marcin6200';
-  memebers[14] = 'QRX';
-  memebers[15] = 'P18plus';
-  memebers[16] = 'Dexter';
-  memebers[17] = 'Novorossia HD Mapper';
-  memebers[18] = 'vistafan12';
-  memebers[19] = 'bartekj1222';
-  memebers[20] = 'Archi';
-  memebers[21] = 'argax';
-  memebers[22] = 'LukaszM600';
-  memebers[23] = 'Cichy';
-  memebers[24] = 'tobiasz';
-  
+  memebers[12] = 'QRX';
+  memebers[13] = 'P18plus';
+  memebers[14] = 'Novorossia HD Mapper';
+  memebers[15] = 'vistafan12';
+  memebers[16] = 'bartekj1222';
+  memebers[17] = 'Archi';
+  memebers[18] = 'argax';
+  memebers[19] = 'LukaszM600';
+  memebers[20] = 'tobiasz';
+  memebers[21] = 'Przeróbki153';
+  memebers[22] = 'Misiek7';
+
   var memeText = new Array();
-  memeText[0] = 'kasme';
+  memeText[0] = 'taa kasme';
   memeText[1] = 'kest';
   memeText[2] = 'qiem';
   memeText[3] = 'wyjebame';
@@ -41,7 +39,13 @@ exports.run = (client, message, params) => {
   memeText[12] = 'SPORRRTOWA';
   memeText[13] = memebers[Math.floor(Math.random()*memebers.length)].toUpperCase() + ' KRUL';
   memeText[14] = '<:E_:461532037405343756>';
-  memeText[15] = '[BŁONT: ' + memeText[Math.floor(Math.random()*memeText.length)] + ']';
+  memeText[15] = 'YOLOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO';
+  memeText[16] = 'cisza';
+  memeText[17] = 'dawać 3 sezon :star: :butterfly:';
+  memeText[18] = 'Niech żyje Arstoczka!';
+  memeText[19] = 'Wiadomość **Wiadomość Wiadomość Wiadomość Wiadomość Wiadomość Wiadomość Wiadomość Wiadomość Wiadomość Wiadomość została usunięta została usunięta została usunięta została usunięta została usunięta została usunięta została usunięta została usunięta została usunięta została usunięta** została usunięta';
+  memeText[20] = 'cz!ban @everyon za nic';
+  memeText[21] = '[BŁONT: ' + memeText[Math.floor(Math.random()*memeText.length)] + ']';
 
   message.channel.send(memeText[Math.floor(Math.random()*memeText.length)]);
 };
