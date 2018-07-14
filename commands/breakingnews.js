@@ -39,14 +39,14 @@ exports.run = (client, message, params) => {
   whereFound[14] = ' na Czaciorze';
   whereFound[15] = ' w kodzie Czacior Bota';
 
-  message.channel.send('BREAKING NEWS: ' + annoucedThing[Math.floor(Math.random()*annoucedThing.length)] + howFound[Math.floor(Math.random()*howFound.length)] + whereFound[Math.floor(Math.random()*whereFound.length)]);
+  message.channel.send('**BREAKING NEWS:** ' + annoucedThing[Math.floor(Math.random()*annoucedThing.length)] + howFound[Math.floor(Math.random()*howFound.length)] + whereFound[Math.floor(Math.random()*whereFound.length)]);
 
 };
 
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['news'],
+  aliases: ['news', 'wiadomości'],
   permLevel: 1
 };
 
