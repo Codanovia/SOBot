@@ -1,17 +1,17 @@
 exports.run = (client, message, params) => {
   var annoucedThing = new Array();
-  annoucedThing[0] = 'Despacito ' + Math.floor(Math.random()*10);
-  annoucedThing[1] = 'Syn Kurczaka ' + Math.floor(Math.random()*10);
-  annoucedThing[2] = 'Shrek ' + Math.floor(Math.random()*10);
-  annoucedThing[3] = 'Auta ' + Math.floor(Math.random()*10);
-  annoucedThing[4] = 'Geometry Dash ' + Math.floor(Math.random()*10);
-  annoucedThing[5] = 'Sezon ' + Math.floor(Math.random()*10) + ' Star Butterfly';
-  annoucedThing[6] = 'Ralph Demolka ' + Math.floor(Math.random()*10);
-  annoucedThing[7] = 'Czacior ' + Math.floor(Math.random()*10);
-  annoucedThing[8] = 'Discord ' + Math.floor(Math.random()*10);
-  annoucedThing[9] = 'ACTA ' + Math.floor(Math.random()*10);
-  annoucedThing[10] = 'EPICA ' + Math.floor(Math.random()*10);
-  annoucedThing[11] = 'Czacior Bot ' + Math.floor(Math.random()*10);
+  annoucedThing[0] = 'Despacito ' + Math.ceil(Math.random()*10);
+  annoucedThing[1] = 'Syn Kurczaka ' + Math.ceil(Math.random()*10);
+  annoucedThing[2] = 'Shrek ' + Math.ceil(Math.random()*10);
+  annoucedThing[3] = 'Auta ' + Math.ceil(Math.random()*10);
+  annoucedThing[4] = 'Geometry Dash ' + Math.ceil(Math.random()*10);
+  annoucedThing[5] = 'Sezon ' + Math.ceil(Math.random()*10) + ' Star Butterfly';
+  annoucedThing[6] = 'Ralph Demolka ' + Math.ceil(Math.random()*10);
+  annoucedThing[7] = 'Czacior ' + Math.ceil(Math.random()*10);
+  annoucedThing[8] = 'Discord ' + Math.ceil(Math.random()*10);
+  annoucedThing[9] = 'ACTA ' + Math.ceil(Math.random()*10);
+  annoucedThing[10] = 'EPICA ' + Math.ceil(Math.random()*10);
+  annoucedThing[11] = 'Czacior Bot ' + Math.ceil(Math.random()*10);
 
   var howFound = new Array();
   howFound[0] = ' ogłoszone';
