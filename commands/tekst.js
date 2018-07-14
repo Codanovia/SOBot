@@ -53,7 +53,7 @@ exports.run = (client, message, params) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['text', 'mem', 'memy', 'meme'],
+  aliases: ['text', 'mem', 'memy', 'meme', 'teksty'],
   permLevel: 1
 };
 
