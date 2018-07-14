@@ -78,6 +78,7 @@ exports.run = (client, message, params) => {
   whereFound[24] = ' przez ONZ';
   whereFound[25] = ' przez NATO';
   whereFound[26] = ' przez Krzysztofa Kolumba';
+  whereFound[27] = ' przeze mnie';
 
   message.channel.send('**BREAKING NEWS:** ' + annoucedThing[Math.floor(Math.random()*annoucedThing.length)] + howFound[Math.floor(Math.random()*howFound.length)] + whereFound[Math.floor(Math.random()*whereFound.length)]);
 
