@@ -33,6 +33,18 @@ exports.run = async (client, message, params) => {
    };
  }
 
+ if (message.author.id === config.ownerID5) {
+   coins[message.author.id] = {
+     coins: Infinity
+   };
+ }
+
+ if (message.author.id === config.ownerID6) {
+   coins[message.author.id] = {
+     coins: Infinity
+   };
+ }
+
   let uCoins = coins[message.author.id].coins;
   message.channel.send(`W tej chwili masz ${uCoins} <:gwiazdka:424229903664414720>`);
 };

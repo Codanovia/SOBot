@@ -33,6 +33,18 @@ exports.run = async (client, message, params) => {
    };
  }
 
+ if (message.author.id === config.ownerID5) {
+   diamonds[message.author.id] = {
+     diamonds: Infinity
+   };
+ }
+
+ if (message.author.id === config.ownerID6) {
+   diamonds[message.author.id] = {
+     diamonds: Infinity
+   };
+ }
+
   let uDiamonds = diamonds[message.author.id].diamonds;
   message.channel.send(`W tej chwili masz ${uDiamonds} :large_blue_diamond:`);
 };

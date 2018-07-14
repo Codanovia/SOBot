@@ -53,6 +53,24 @@ exports.run = async (client, message, params) => {
    };
  }
 
+ if (message.author.id === config.ownerID5) {
+   coins[message.author.id] = {
+     coins: Infinity
+   };
+   diamonds[message.author.id] = {
+     diamonds: Infinity
+   };
+ }
+
+ if (message.author.id === config.ownerID6) {
+   coins[message.author.id] = {
+     coins: Infinity
+   };
+   diamonds[message.author.id] = {
+     diamonds: Infinity
+   };
+ }
+
   let role = message.mentions.roles.first() || params.join(' ');
   const bRole1 = message.guild.roles.find('name', bRoles.bRole1.name);
   const bRole2 = message.guild.roles.find('name', bRoles.bRole2.name);

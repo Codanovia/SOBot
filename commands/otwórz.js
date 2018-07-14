@@ -87,6 +87,36 @@ exports.run = (client, message, params) => {
    };
  }
 
+ if (message.author.id === config.ownerID5) {
+   coins[message.author.id] = {
+     coins: Infinity
+   };
+   diamonds[message.author.id] = {
+     diamonds: Infinity
+   };
+   keys[message.author.id] = {
+     keys: Infinity
+   };
+   blackorbs[message.author.id] = {
+     blackorbs: Infinity
+   };
+ }
+
+ if (message.author.id === config.ownerID6) {
+   coins[message.author.id] = {
+     coins: Infinity
+   };
+   diamonds[message.author.id] = {
+     diamonds: Infinity
+   };
+   keys[message.author.id] = {
+     keys: Infinity
+   };
+   blackorbs[message.author.id] = {
+     blackorbs: Infinity
+   };
+ }
+
   let box = params.join(' ');
   var chance = Math.random();
   let sCoins = coins[message.author.id].coins;

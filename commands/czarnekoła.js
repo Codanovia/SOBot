@@ -33,6 +33,18 @@ exports.run = async (client, message, params) => {
    };
  }
 
+ if (message.author.id === config.ownerID5) {
+   blackorbs[message.author.id] = {
+     blackorbs: Infinity
+   };
+ }
+
+ if (message.author.id === config.ownerID6) {
+   blackorbs[message.author.id] = {
+     blackorbs: Infinity
+   };
+ }
+
   let uBlackorbs = blackorbs[message.author.id].blackorbs;
   message.channel.send(`W tej chwili masz ${uBlackorbs} :black_circle:`);
 };
