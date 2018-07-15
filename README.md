@@ -25,4 +25,4 @@ Obecna wersja bota to 1.3.3
 
 4. Wejdź na twoją domenę którą zarejestrowałeś w panelu
 
-5. Jeżeli wyświetla się - w tym przypadku - "hello czacior!" to oznacza że bot działa prawidłowo.
+5. Jeżeli wyświetla się - w tym przypadku - "Witaj Czacior!" to oznacza że bot działa prawidłowo.

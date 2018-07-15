@@ -8,7 +8,7 @@ require('./util/eventLoader')(client);
 var http = require('http');
 var server = http.createServer(function(req, res) {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end("hello czacior!\n");
+    res.end("Witaj Czacior!\n");
 });
 server.listen(3000);
 
