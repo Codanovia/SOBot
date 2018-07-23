@@ -9,6 +9,4 @@ module.exports = client => {
   client.on('guildBanAdd', reqEvent('guildBanAdd'));
   client.on('guildBanRemove', reqEvent('guildBanRemove'));
   client.on('messageDelete', reqEvent('messageDelete'));
-  client.on('typingStart', reqEvent('typingStart'));
-  client.on('typingStop', reqEvent('typingStop'));
 };

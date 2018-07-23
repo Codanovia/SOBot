@@ -30,6 +30,11 @@ exports.conf = {
 
 exports.help = {
   name: "reload",
-  description: "Odświeża plik komendy, jeśli został on zmieniony.",
-  usage: "reload <commandname>"
+  description: "Odświeża plik komendy, jeśli został on zmieniony",
+  usage: "cz!reload (nazwa komendy)"
+};
+
+exports.util = {
+  name: "reload",
+  description: "Odświeża plik komendy, jeśli został on zmieniony"
 };

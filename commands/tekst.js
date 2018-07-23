@@ -23,6 +23,11 @@ exports.run = (client, message, params) => {
   memebers[20] = 'tobiasz';
   memebers[21] = 'Przeróbki153';
   memebers[22] = 'Misiek7';
+  memebers[23] = 'm6200';
+  memebers[24] = 'Dexter !';
+  memebers[25] = 'Jedenasty Doktor';
+  memebers[26] = 'Dekoder Polsatu';
+  memebers[27] = 'Alex Top';
 
   var memeText = new Array();
   memeText[0] = 'taa kasme';
@@ -60,5 +65,10 @@ exports.conf = {
 exports.help = {
   name: "tekst",
   description: "Losuje jednego ze śmiesznych tekstów które są często używane na Czaciorze",
-  usage: "tekst"
+  usage: "cz!tekst"
+};
+
+exports.fun = {
+  name: "tekst",
+  description: "Losuje jednego ze śmiesznych tekstów które są często używane na Czaciorze"
 };

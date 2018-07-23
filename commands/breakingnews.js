@@ -12,6 +12,15 @@ exports.run = (client, message, params) => {
   annoucedThing[9] = 'ACTA ' + Math.ceil(Math.random()*10);
   annoucedThing[10] = 'EPICA ' + Math.ceil(Math.random()*10);
   annoucedThing[11] = 'Czacior Bot ' + Math.ceil(Math.random()*10);
+  annoucedThing[12] = 'Internet Explorer ' + Math.ceil(Math.random()*100);
+  annoucedThing[13] = 'Google Chrome ' + Math.ceil(Math.random()*100);
+  annoucedThing[14] = 'Sezon ' + Math.ceil(Math.random()*25) + ' Fortnite\'a';
+  annoucedThing[15] = 'Opera ' + Math.ceil(Math.random()*100);
+  annoucedThing[16] = 'Microsoft Edge ' + Math.ceil(Math.random()*100);
+  annoucedThing[17] = 'Sezon ' + Math.ceil(Math.random()*999999) + ' Mody na Sukces'
+  annoucedThing[18] = 'Baldi ' + Math.ceil(Math.random()*10);
+  annoucedThing[19] = Math.ceil(Math.random()*10); + ' Rzesza';
+  annoucedThing[20] = 'Saper ' + Math.ceil(Math.random()*10);
 
   var howFound = new Array();
   howFound[0] = ' ogłoszone';
@@ -94,5 +103,10 @@ exports.conf = {
 exports.help = {
   name: "breakingnews",
   description: "Wyświetla losowego breaking newsa",
-  usage: "breakingnews"
+  usage: "cz!breakingnews"
+};
+
+exports.fun = {
+  name: "breakingnews",
+  description: "Wyświetla losowego breaking newsa"
 };

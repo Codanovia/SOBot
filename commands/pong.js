@@ -1,7 +1,7 @@
 exports.run = (client, message, params) => {
   message.channel.send('Ponging...')
     .then(message => {
-      message.edit(`Ping! (took: ${message.createdTimestamp - message.createdTimestamp}ms)`);
+      message.edit(`Ping! \`${message.createdTimestamp}ms\``);
     });
 };
 
@@ -15,5 +15,10 @@ exports.conf = {
 exports.help = {
   name: "pong",
   description: "...Ping!",
-  usage: "pong"
+  usage: "cz!pong"
+};
+
+exports.util = {
+  name: "pong",
+  description: "...Ping!"
 };

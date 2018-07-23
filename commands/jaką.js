@@ -12,5 +12,10 @@ exports.conf = {
 exports.help = {
   name: "jaką",
   description: "Odpowiada \"sraką\"",
-  usage: "jaką"
+  usage: "cz!jaką"
+};
+
+exports.fun = {
+  name: "jaką",
+  description: "Odpowiada \"sraką\""
 };

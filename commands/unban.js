@@ -2,31 +2,31 @@ const {RichEmbed} = require('discord.js');
 const config = require('../config.json');
 
 exports.run = async (client, message, params) => {
-  const reason = params.splice(1, params.length).join(' ') || 'brak';
+  const reason = params.slice(1).join(' ');
+  client.unbanReason = reason;
+  client.unbanAuth = message.author;
   const user = params[0];
   const modlog = client.channels.find('name', 'ogłoszenia')
+  if (reason.length < 1) return message.reply('musisz podać powód odbanowania użytkownika')
   if (!user) return message.reply('musisz podać nazwę użytkownika którego chcesz odbanować.').catch(console.error);
   message.guild.unban(user);
   message.reply(`pomyślnie odbanowano użytkownika ${user}`);
-  //user.send('Mamy świetną nowinę! Właśnie cię odbanowano na najlepszym serwerze Czacior! Łap zaproszenie i się ciesz: https://discord.gg/XWCxeUZ :smile:'); (may add in public bot version)
-
-  const embed = new RichEmbed()
-  .setAuthor('Czacior - ostrzeżenia i bany', 'https://i.imgur.com/zNC67j6.png')
-  .setColor([0, 255, 0])
-  .setTimestamp()
-  .setDescription(`**Działanie:** Unban\n**Wyznaczony użytkownik:** ${user}\n**Odpowiedzialny moderator:** ${message.author}\n**Powód:** ${reason}`);
-  return client.channels.get(modlog.id).send({embed});
 };
 
 exports.conf = {
-  enabled: false,
-  guildOnly: false,
+  enabled: true,
+  guildOnly: true,
   aliases: ['odbanuj'],
   permLevel: 2
 };
 
 exports.help = {
   name: 'unban',
-  description: 'Odbanowuje zbanowanego użytkownika.',
-  usage: 'unban [nazwa użytkownika] [powód]'
+  description: 'Odbanowuje zbanowanego użytkownika',
+  usage: 'cz!unban (nazwa użytkownika) (powód)'
+};
+
+exports.moderation = {
+  name: 'unban',
+  description: 'Odbanowuje zbanowanego użytkownika'
 };

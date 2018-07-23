@@ -14,6 +14,11 @@ exports.conf = {
 
 exports.help = {
   name: "notpl",
-  description: "Przypisuje użytkownikowi rolę Zagraniczny.",
-  usage: "notpl"
+  description: "Przypisuje użytkownikowi rolę Zagraniczny",
+  usage: "cz!notpl"
+};
+
+exports.util = {
+  name: "notpl",
+  description: "Przypisuje użytkownikowi rolę Zagraniczny"
 };

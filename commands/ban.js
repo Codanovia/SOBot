@@ -1,18 +1,17 @@
 const {RichEmbed} = require('discord.js');
 const {caseNumber} = require('../util/caseNumber.js');
 const {parseUser} = require('../util/parseUser.js');
-const config = require('../config.json');
 
 exports.run = async (client, message, params) => {
   const user = message.mentions.users.first();
   parseUser(message, user);
   const modlog = client.channels.find('name', 'ogłoszenia');
   const caseNum = await caseNumber(client, modlog);
+  if (!modlog) return message.reply('nie mogę znaleźć kanału z ogłoszeniami');
   if (message.mentions.users.size < 1) return message.reply('musisz napisać kogo chcesz zbanować.').catch(console.error);
   const reason = params.splice(1, params.length).join(' ') || 'brak';
   user.send(`Zostałeś zbanowany na serwerze za ${reason}! Naprawdę, jak mogłeś zrobić tak okrutną rzecz?! :rage:`);
   message.guild.ban(user, 1, reason);
-  message.reply(`pomyślnie zbanowano użytkownika ${user}`);
 
   const embed = new RichEmbed()
   .setAuthor('Czacior - ostrzeżenia i bany', 'https://i.imgur.com/zNC67j6.png')
@@ -32,6 +31,11 @@ exports.conf = {
 
 exports.help = {
   name: 'ban',
-  description: 'Banuje użytkownika naruszającego regulamin Czaciora.',
-  usage: 'ban [nazwa użytkownika] [powód]'
+  description: 'Banuje użytkownika naruszającego regulamin Czaciora',
+  usage: 'cz!ban (nazwa użytkownika) [powód]'
+};
+
+exports.moderation = {
+  name: 'ban',
+  description: 'Banuje użytkownika naruszającego regulamin Czaciora'
 };

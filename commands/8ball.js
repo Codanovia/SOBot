@@ -30,7 +30,7 @@ exports.run = (client, message, params) => {
 
 exports.conf = {
   enabled: true,
-  guildOnly: true,
+  guildOnly: false,
   aliases: [],
   permLevel: 1
 };
@@ -38,5 +38,10 @@ exports.conf = {
 exports.help = {
   name: "8ball",
   description: "Pyta magiczną kulę 8 o coś tam",
-  usage: "8ball (pytanie)"
+  usage: "cz!8ball (pytanie)"
+};
+
+exports.fun = {
+  name: "8ball",
+  description: "Pyta magiczną kulę 8 o coś tam"
 };

@@ -1,6 +1,6 @@
 # Czacior Bot
 Bot stworzony na potrzebę serwera [Czacior na Discordzie.](https://discord.gg/XWCxeUZ)\
-Obecna wersja bota to 1.3.3
+Obecna wersja bota to 1.4.1
 
 # Hostowanie na CT8/MyDevil
 1. Zaloguj się do panelu

@@ -13,6 +13,11 @@ exports.conf = {
 
 exports.help = {
   name: "say",
-  description: "Pisze to samo co użytkownik który pisze tę komendę.",
-  usage: "say (jakieś tam słowo czy zdanie)"
+  description: "Pisze to samo co użytkownik który pisze tę komendę",
+  usage: "cz!say (jakieś tam słowo czy zdanie)"
+};
+
+exports.fun = {
+  name: "say",
+  description: "Pisze to samo co użytkownik który pisze tę komendę"
 };

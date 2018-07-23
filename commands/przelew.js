@@ -1,9 +1,8 @@
-const Discord = require('discord.js');
 const fs = require('fs');
 const coins = require('../coins.json');
 const config = require('../config.json');
 
-exports.run = async (client, message, params) => {
+exports.run = (client, message, params) => {
   if(!coins[message.author.id]) {
     coins[message.author.id] = {
       coins: 100
@@ -83,13 +82,18 @@ exports.run = async (client, message, params) => {
 
 exports.conf = {
   enabled: true,
-  guildOnly: false,
+  guildOnly: true,
   aliases: ['pay', 'donate'],
   permLevel: 1
 };
 
 exports.help = {
   name: "przelew",
-  description: "Przelewa gwiazdki na inne konto.",
-  usage: "przelew (nazwa użytkownika) (liczba gwiazdek)"
+  description: "Przelewa gwiazdki na inne konto",
+  usage: "cz!przelew (nazwa użytkownika) (liczba gwiazdek)"
+};
+
+exports.currency = {
+  name: "przelew",
+  description: "Przelewa gwiazdki na inne konto"
 };

@@ -16,14 +16,19 @@ exports.run = async (client, message, params) => {
 };
 
 exports.conf = {
-  enabled: false,
-  guildOnly: false,
+  enabled: true,
+  guildOnly: true,
   aliases: [],
   permLevel: 1
 };
 
 exports.help = {
   name: "oof",
-  description: "Wyrzuca autora wiadomości z serwera.",
-  usage: "oof"
+  description: "Wyrzuca autora wiadomości z serwera",
+  usage: "cz!oof"
+};
+
+exports.fun = {
+  name: "oof",
+  description: "Wyrzuca autora wiadomości z serwera"
 };

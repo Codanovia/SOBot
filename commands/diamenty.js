@@ -1,10 +1,17 @@
-const Discord = require('discord.js');
 const diamonds = require('../diamonds.json');
 const config = require('../config.json');
 
-exports.run = async (client, message, params) => {
+exports.run = (client, message, params) => {
+  let pUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(params[0]);
+
   if(!diamonds[message.author.id]) {
     diamonds[message.author.id] = {
+      diamonds: 0
+    };
+  }
+
+  if(!diamonds[pUser.id]) {
+    diamonds[pUser.id] = {
       diamonds: 0
     };
   }
@@ -45,19 +52,30 @@ exports.run = async (client, message, params) => {
    };
  }
 
-  let uDiamonds = diamonds[message.author.id].diamonds;
-  message.channel.send(`W tej chwili masz ${uDiamonds} :large_blue_diamond:`);
+ let uDiamonds = diamonds[message.author.id].diamonds;
+ let sDiamonds = diamonds[pUser.id].diamonds;
+ if (message.mentions.users.size < 1) {
+   message.channel.send(`W tej chwili masz ${uDiamonds} :large_blue_diamond:`)
+ }
+ else {
+   message.channel.send(`Ten użytkownik ma ${sDiamonds} :large_blue_diamond:`);
+ }
 };
 
 exports.conf = {
   enabled: true,
-  guildOnly: false,
+  guildOnly: true,
   aliases: ['diamonds'],
   permLevel: 0
 };
 
 exports.help = {
   name: "diamenty",
-  description: "Wyświetla liczbę posiadanych diamentów.",
-  usage: "diamenty"
+  description: "Wyświetla liczbę posiadanych diamentów",
+  usage: "cz!diamenty [nazwa użytkownika]"
+};
+
+exports.currency = {
+  name: "diamenty",
+  description: "Wyświetla liczbę posiadanych diamentów"
 };

@@ -4,7 +4,7 @@ const coins = require('../coins.json');
 const config = require('../config.json');
 const diamonds = require('../diamonds.json');
 
-exports.run = async (client, message, params) => {
+exports.run = (client, message, params) => {
   if(!coins[message.author.id]) {
     coins[message.author.id] = {
       coins: 100
@@ -71,7 +71,7 @@ exports.run = async (client, message, params) => {
    };
  }
 
-  let role = message.mentions.roles.first() || params.join(' ');
+  let role = message.mentions.roles.first();
   const bRole1 = message.guild.roles.find('name', bRoles.bRole1.name);
   const bRole2 = message.guild.roles.find('name', bRoles.bRole2.name);
   const bRole3 = message.guild.roles.find('name', bRoles.bRole3.name);
@@ -888,6 +888,11 @@ exports.conf = {
 
 exports.help = {
   name: "kup",
-  description: "Kupuje rolę za posiadane gwiazdki.",
-  usage: "kup [nazwa roli]"
+  description: "Kupuje rolę za posiadane gwiazdki",
+  usage: "cz!kup (nazwa roli)"
+};
+
+exports.currency = {
+  name: "kup",
+  description: "Kupuje rolę za posiadane gwiazdki"
 };
