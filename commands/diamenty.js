@@ -52,6 +52,12 @@ exports.run = (client, message, params) => {
    };
  }
 
+ if (message.author.id === config.ownerID7) {
+   diamonds[message.author.id] = {
+     diamonds: Infinity
+   };
+ }
+
  let uDiamonds = diamonds[message.author.id].diamonds;
  let sDiamonds = diamonds[pUser.id].diamonds;
  if (message.mentions.users.size < 1) {

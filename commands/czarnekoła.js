@@ -52,6 +52,12 @@ exports.run = (client, message, params) => {
    };
  }
 
+ if (message.author.id === config.ownerID7) {
+   blackorbs[message.author.id] = {
+     blackorbs: Infinity
+   };
+ }
+
   let uBlackorbs = blackorbs[message.author.id].blackorbs;
   let sBlackorbs = blackorbs[pUser.id].blackorbs;
   if (message.mentions.users.size < 1) {

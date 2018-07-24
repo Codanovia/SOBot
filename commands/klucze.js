@@ -52,6 +52,12 @@ exports.run = (client, message, params) => {
    };
  }
 
+ if (message.author.id === config.ownerID7) {
+   keys[message.author.id] = {
+     keys: Infinity
+   };
+ }
+
  let uKeys = keys[message.author.id].keys;
  let sKeys = keys[pUser.id].keys;
  if (message.mentions.users.size < 1) {

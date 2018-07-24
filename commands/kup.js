@@ -71,6 +71,15 @@ exports.run = (client, message, params) => {
    };
  }
 
+ if (message.author.id === config.ownerID7) {
+   coins[message.author.id] = {
+     coins: Infinity
+   };
+   diamonds[message.author.id] = {
+     diamonds: Infinity
+   };
+ }
+
   let role = message.mentions.roles.first();
   const bRole1 = message.guild.roles.find('name', bRoles.bRole1.name);
   const bRole2 = message.guild.roles.find('name', bRoles.bRole2.name);

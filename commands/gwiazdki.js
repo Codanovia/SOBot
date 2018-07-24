@@ -52,6 +52,12 @@ exports.run = (client, message, params) => {
    };
  }
 
+ if (message.author.id === config.ownerID7) {
+   coins[message.author.id] = {
+     coins: Infinity
+   };
+ }
+
  let uCoins = coins[message.author.id].coins;
  let sCoins = coins[pUser.id].coins;
  if (message.mentions.users.size < 1) {

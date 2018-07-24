@@ -83,6 +83,7 @@ client.elevation = message => {
   if (message.author.id === config.ownerID4) permLevel = 4;
   if (message.author.id === config.ownerID5) permLevel = 4;
   if (message.author.id === config.ownerID6) permLevel = 4;
+  if (message.author.id === config.ownerID7) permLevel = 4;
   return permLevel;
 };
 
