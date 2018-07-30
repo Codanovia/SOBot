@@ -16,43 +16,8 @@ exports.run = (client, message, params) => {
     };
   }
 
-  if (message.author.id === config.ownerID) {
-   diamonds[message.author.id] = {
-     diamonds: Infinity
-   };
- }
-
- if (message.author.id === config.ownerID2) {
-   diamonds[message.author.id] = {
-     diamonds: Infinity
-   };
- }
-
- if (message.author.id === config.ownerID3) {
-   diamonds[message.author.id] = {
-     diamonds: Infinity
-   };
- }
-
- if (message.author.id === config.ownerID4) {
-   diamonds[message.author.id] = {
-     diamonds: Infinity
-   };
- }
-
- if (message.author.id === config.ownerID5) {
-   diamonds[message.author.id] = {
-     diamonds: Infinity
-   };
- }
-
- if (message.author.id === config.ownerID6) {
-   diamonds[message.author.id] = {
-     diamonds: Infinity
-   };
- }
-
- if (message.author.id === config.ownerID7) {
+  const owner_role = message.guild.roles.find('name', config.ownerRoleName);
+  if (owner_role && message.member.roles.has(owner_role.id)) {
    diamonds[message.author.id] = {
      diamonds: Infinity
    };
@@ -60,8 +25,11 @@ exports.run = (client, message, params) => {
 
  let uDiamonds = diamonds[message.author.id].diamonds;
  let sDiamonds = diamonds[pUser.id].diamonds;
- if (message.mentions.users.size < 1) {
+ if (message.mentions.users.size === 0) {
    message.channel.send(`W tej chwili masz ${uDiamonds} :large_blue_diamond:`)
+ }
+ else if (message.mentions.users.size > 1) {
+   message.channel.send('Nie możesz wymienić aż tak tylu użytkowników!');
  }
  else {
    message.channel.send(`Ten użytkownik ma ${sDiamonds} :large_blue_diamond:`);

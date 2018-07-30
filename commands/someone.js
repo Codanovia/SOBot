@@ -40,7 +40,13 @@ exports.run = (client, message, params) => {
   memebers[25] = 'Jedenasty Doktor';
   memebers[26] = 'Dekoder Polsatu';
   memebers[27] = 'Alex Top';
-
+  memebers[28] = 'risema16';
+  memebers[29] = 'garhuszewski';
+  memebers[30] = 'PatrZDZ';
+  memebers[31] = 'Diana';
+  memebers[32] = 'AdykSS';
+  memebers[33] = 'dawiiiiii';
+  
   message.channel.send(`**@someone ${emote[Math.floor(Math.random()*emote.length)]} *${memebers[Math.floor(Math.random()*memebers.length)]}***`);
 };
 

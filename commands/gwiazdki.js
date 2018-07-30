@@ -16,43 +16,8 @@ exports.run = (client, message, params) => {
     };
   }
 
-  if (message.author.id === config.ownerID) {
-   coins[message.author.id] = {
-     coins: Infinity
-   };
- }
-
- if (message.author.id === config.ownerID2) {
-   coins[message.author.id] = {
-     coins: Infinity
-   };
- }
-
- if (message.author.id === config.ownerID3) {
-   coins[message.author.id] = {
-     coins: Infinity
-   };
- }
-
- if (message.author.id === config.ownerID4) {
-   coins[message.author.id] = {
-     coins: Infinity
-   };
- }
-
- if (message.author.id === config.ownerID5) {
-   coins[message.author.id] = {
-     coins: Infinity
-   };
- }
-
- if (message.author.id === config.ownerID6) {
-   coins[message.author.id] = {
-     coins: Infinity
-   };
- }
-
- if (message.author.id === config.ownerID7) {
+  const owner_role = message.guild.roles.find('name', config.ownerRoleName);
+  if (owner_role && message.member.roles.has(owner_role.id)) {
    coins[message.author.id] = {
      coins: Infinity
    };
@@ -60,7 +25,7 @@ exports.run = (client, message, params) => {
 
  let uCoins = coins[message.author.id].coins;
  let sCoins = coins[pUser.id].coins;
- if (message.mentions.users.size < 1) {
+ if (message.mentions.users.size === 0) {
    message.channel.send(`W tej chwili masz ${uCoins} <:gwiazdka:424229903664414720>`)
  }
  else if (message.mentions.users.size > 1) {

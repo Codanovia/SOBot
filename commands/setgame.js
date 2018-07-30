@@ -1,6 +1,6 @@
 exports.run = (client, message, params) => {
   var result = params.join(' ');
-  if (!result) return client.user.setActivity('cały serwer | cz!help | v. 1.4.1', {type: 'WATCHING'});
+  if (!result) return client.user.setActivity('cały serwer | v. 1.4.2', {type: 'WATCHING'});
   client.user.setActivity(result);
 };
 

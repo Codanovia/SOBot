@@ -16,43 +16,8 @@ exports.run = (client, message, params) => {
     };
   }
 
-  if (message.author.id === config.ownerID) {
-   keys[message.author.id] = {
-     keys: Infinity
-   };
- }
-
- if (message.author.id === config.ownerID2) {
-   keys[message.author.id] = {
-     keys: Infinity
-   };
- }
-
- if (message.author.id === config.ownerID3) {
-   keys[message.author.id] = {
-     keys: Infinity
-   };
- }
-
- if (message.author.id === config.ownerID4) {
-   keys[message.author.id] = {
-     keys: Infinity
-   };
- }
-
- if (message.author.id === config.ownerID5) {
-   keys[message.author.id] = {
-     keys: Infinity
-   };
- }
-
- if (message.author.id === config.ownerID6) {
-   keys[message.author.id] = {
-     keys: Infinity
-   };
- }
-
- if (message.author.id === config.ownerID7) {
+  const owner_role = message.guild.roles.find('name', config.ownerRoleName);
+  if (owner_role && message.member.roles.has(owner_role.id)) {
    keys[message.author.id] = {
      keys: Infinity
    };
@@ -60,8 +25,11 @@ exports.run = (client, message, params) => {
 
  let uKeys = keys[message.author.id].keys;
  let sKeys = keys[pUser.id].keys;
- if (message.mentions.users.size < 1) {
+ if (message.mentions.users.size === 0) {
    message.channel.send(`W tej chwili masz ${uKeys} :key:`)
+ }
+ else if (message.mentions.users.size > 1) {
+   message.channel.send('Nie możesz wymienić aż tak tylu użytkowników!');
  }
  else {
    message.channel.send(`Ten użytkownik ma ${sKeys} :key:`);

@@ -28,6 +28,12 @@ exports.run = (client, message, params) => {
   memebers[25] = 'Jedenasty Doktor';
   memebers[26] = 'Dekoder Polsatu';
   memebers[27] = 'Alex Top';
+  memebers[28] = 'risema16';
+  memebers[29] = 'garhuszewski';
+  memebers[30] = 'PatrZDZ';
+  memebers[31] = 'Diana';
+  memebers[32] = 'AdykSS';
+  memebers[33] = 'dawiiiiii';
 
   var memeText = new Array();
   memeText[0] = 'taa kasme';
@@ -50,7 +56,29 @@ exports.run = (client, message, params) => {
   memeText[18] = 'Niech żyje Arstoczka!';
   memeText[19] = 'Wiadomość **Wiadomość Wiadomość Wiadomość Wiadomość Wiadomość Wiadomość Wiadomość Wiadomość Wiadomość Wiadomość została usunięta została usunięta została usunięta została usunięta została usunięta została usunięta została usunięta została usunięta została usunięta została usunięta** została usunięta';
   memeText[20] = 'cz!ban @everyon za nic';
-  memeText[21] = '[BŁONT: ' + memeText[Math.floor(Math.random()*memeText.length)] + ']';
+  memeText[21] = 'KRÓLICZEK MUSI WCIĄGAĆ PLAAAAACUUUUUUSIEEEE';
+  memeText[22] = 'Ah koka kola, jaka pyszna';
+  memeText[23] = 'Bisów nie będzie. Po reklamach';
+  memeText[24] = 'CO MAM ZROBIĆ ŻEBYŚ MNIE NIE HEJTOWAŁ?';
+  memeText[25] = 'KURŁA OENA';
+  memeText[26] = 'GŁOWA W BETONIARCEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE';
+  memeText[27] = 'i cyk dwójeczka';
+  memeText[28] = 'https://cdn.discordapp.com/attachments/461251813178343449/472128530088722432/a789fa959d8d89799dd392b5da036dbb.png';
+  memeText[29] = 'HEINZ UP, BABY HEINZ UP';
+  memeText[30] = 'geogeogeologie geogeogeologie geogeologie geologie geologie geogeologie';
+  memeText[31] = 'KOCHAM SIĘ W EIP';
+  memeText[32] = 'JADĘ DO SZKOŁY 400 M EIPEM';
+  memeText[33] = 'JADĘ OD KRZESŁA DO KOMPA EIPEM';
+  memeText[34] = 'Detention for you.';
+  memeText[35] = 'GOTTA SWEEP SWEEP SWEEP';
+  memeText[36] = 'nasram do telewizora';
+  memeText[37] = 'zmienić muzykę w familiadzie bo tamta mi się znudziła';
+  memeText[38] = 'zlikwidować ten dziennik telewizyjny';
+  memeText[39] = 'dawać 3 sezon Star Butterfly';
+  memeText[40] = 'Placki, placki, placki, placki, placki, dawać, królik, dawać, am, am, am!';
+  memeText[41] = 'Srancja to chuje bo wygrały MŚ 2018';
+  memeText[42] = 'memebers';
+  memeText[43] = 'gimnazjam';
 
   message.channel.send(memeText[Math.floor(Math.random()*memeText.length)]);
 };
