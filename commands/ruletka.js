@@ -19,7 +19,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "roulette",
+  name: "ruletka",
   description: "Rosyjska ruletka!",
   usage: "śo!roulette"
 };
