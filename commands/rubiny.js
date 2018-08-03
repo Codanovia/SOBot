@@ -29,7 +29,7 @@ exports.run = (client, message, params) => {
    message.channel.send(`W tej chwili masz ${uRubies} :diamonds:`)
  }
  else if (message.mentions.users.size > 1) {
-   message.channel.send('Nie możesz wymienić aż tak tylu użytkowników!');
+   message.channel.send('<:blobtickdeny:474749732317822986> Nie możesz wymienić aż tak tylu użytkowników!');
  }
  else {
    message.channel.send(`Ten użytkownik ma ${sRubies} :diamonds:`);
@@ -46,10 +46,5 @@ exports.conf = {
 exports.help = {
   name: "rubiny",
   description: "Wyświetla liczbę posiadanych rubinów",
-  usage: "cz!rubiny [nazwa użytkownika]"
-};
-
-exports.currency = {
-  name: "rubiny",
-  description: "Wyświetla liczbę posiadanych rubinów"
+  usage: "śo!rubiny [nazwa użytkownika]"
 };

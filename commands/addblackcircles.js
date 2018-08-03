@@ -12,15 +12,13 @@ exports.run = (client, message, params) => {
 
   let pBlackorbs = blackorbs[pUser.id].blackorbs;
 
-  if (isNaN(params[1])) return message.reply('wpisana wartość jest nieprawidłowa.');
-
-  if (params[1] < 1) return message.reply('nie możesz dodać zerowych lub ujemnych czarnych kół!');
+  if (isNaN(params[1])) return message.channel.send('<:blobtickdeny:474749732317822986> Wpisana wartość jest nieprawidłowa.');
 
   blackorbs[pUser.id] = {
     blackorbs: pBlackorbs + parseInt(params[1])
   };
 
-  message.reply(`pomyślnie dodano ${params[1]} :black_circle: na konto użytkownika ${pUser}`);
+  message.channel.send(`<:blobtickaccept:474749869727416333> Pomyślnie dodano ${params[1]} :black_circle: na konto użytkownika ${pUser}`);
 
   fs.writeFile('./blackorbs.json', JSON.stringify(blackorbs), (err) => {
     if (err) console.error(err)
@@ -32,16 +30,11 @@ exports.conf = {
   enabled: true,
   guildOnly: true,
   aliases: ['dodajczarnekoła'],
-  permLevel: 4
+  permLevel: 3
 };
 
 exports.help = {
   name: "addblackcircles",
   description: "Dodaje czarne koła na czyjeś konto",
-  usage: "cz!addblackcircles (nazwa użytkownika) (liczba czarnych kół)"
-};
-
-exports.util = {
-  name: "addblackcircles",
-  description: "Dodaje czarne koła na czyjeś konto"
+  usage: "śo!addblackcircles (nazwa użytkownika) (liczba czarnych kół)"
 };

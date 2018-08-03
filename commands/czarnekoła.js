@@ -29,7 +29,7 @@ exports.run = (client, message, params) => {
     message.channel.send(`W tej chwili masz ${uBlackorbs} :black_circle:`)
   }
   else if (message.mentions.users.size > 1) {
-    message.channel.send('Nie możesz wymienić aż tak tylu użytkowników!');
+    message.channel.send('<:blobtickdeny:474749732317822986> Nie możesz wymienić aż tak tylu użytkowników!');
   }
   else {
     message.channel.send(`Ten użytkownik ma ${sBlackorbs} :black_circle:`);
@@ -46,10 +46,5 @@ exports.conf = {
 exports.help = {
   name: "czarnekoła",
   description: "Wyświetla liczbę posiadanych czarnych kół",
-  usage: "cz!czarnekoła [nazwa użytkownika]"
-};
-
-exports.currency = {
-  name: "czarnekoła",
-  description: "Wyświetla liczbę posiadanych czarnych kół"
+  usage: "śo!czarnekoła [nazwa użytkownika]"
 };

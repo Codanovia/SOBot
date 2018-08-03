@@ -1,6 +1,6 @@
 exports.run = (client, message, params) => {
   var result = params.join(' ');
-  if (!result) return client.user.setActivity('cały serwer | v. 1.4.2', {type: 'WATCHING'});
+  if (!result) return client.user.setActivity('cały serwer | śo!help | v. 2.0.0', {type: 'WATCHING'});
   client.user.setActivity(result);
 };
 
@@ -14,10 +14,5 @@ exports.conf = {
 exports.help = {
   name: "setgame",
   description: "Zmienia grę w którą gra bot",
-  usage: "cz!setgame (nazwa gry)"
-};
-
-exports.util = {
-  name: "setgame",
-  description: "Zmienia grę w którą gra bot"
+  usage: "śo!setgame (nazwa gry)"
 };

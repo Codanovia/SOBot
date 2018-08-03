@@ -26,13 +26,13 @@ exports.run = (client, message, params) => {
  let uCoins = coins[message.author.id].coins;
  let sCoins = coins[pUser.id].coins;
  if (message.mentions.users.size === 0) {
-   message.channel.send(`W tej chwili masz ${uCoins} <:gwiazdka:424229903664414720>`)
+   message.channel.send(`W tej chwili masz ${uCoins} <:gwiazdka:473872654294843393>`)
  }
  else if (message.mentions.users.size > 1) {
-   message.channel.send('Nie możesz wymienić aż tak tylu użytkowników!');
+   message.channel.send('<:blobtickdeny:474749732317822986> Nie możesz wymienić aż tak tylu użytkowników!');
  }
  else {
-   message.channel.send(`Ten użytkownik ma ${sCoins} <:gwiazdka:424229903664414720>`);
+   message.channel.send(`Ten użytkownik ma ${sCoins} <:gwiazdka:473872654294843393>`);
  }
 };
 
@@ -46,10 +46,5 @@ exports.conf = {
 exports.help = {
   name: "gwiazdki",
   description: "Wyświetla liczbę posiadanych gwiazdek",
-  usage: "cz!gwiazdki [nazwa użytkownika]"
-};
-
-exports.currency = {
-  name: "gwiazdki",
-  description: "Wyświetla liczbę posiadanych gwiazdek"
+  usage: "śo!gwiazdki [nazwa użytkownika]"
 };

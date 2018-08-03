@@ -4,14 +4,14 @@ const {caseNumber} = require('../util/caseNumber.js')
 exports.run = async (client, message, params) => {
   const modlog = client.channels.find('name', 'ogłoszenia');
   const caseNum = await caseNumber(client, modlog);
+  message.author.send('<:oof:474751352241651734> Oof! Jeśli chcesz się odrodzić, to tutaj masz zaproszenie: https://discord.gg/E36ZGZE :smiley:');
   message.guild.member(message.author).kick();
-  message.author.send('Oof! Jeśli chcesz się odrodzić, to tutaj masz zaproszenie: https://discord.gg/XWCxeUZ :smiley:');
   const embed = new RichEmbed()
-  .setAuthor('Czacior - ostrzeżenia i bany', 'https://i.imgur.com/zNC67j6.png')
-  .setColor([232, 44, 12])
+  .setAuthor('Świat Oodrona - ostrzeżenia i bany', message.guild.iconURL)
+  .setColor([230, 45, 10])
   .setTimestamp()
   .setDescription(`**Działanie:** Wyrzucenie z serwera\n**Karany:** ${message.author}\n**Odpowiedzialny moderator:** Autokick\n**Powód:** Oof!`)
-  .setFooter(`Przypadek ${caseNum}`, "https://i.imgur.com/zNC67j6.png");
+  .setFooter(`Przypadek ${caseNum}`, message.guild.iconURL);
   return client.channels.get(modlog.id).send({embed});
 };
 
@@ -25,10 +25,5 @@ exports.conf = {
 exports.help = {
   name: "oof",
   description: "Wyrzuca autora wiadomości z serwera",
-  usage: "cz!oof"
-};
-
-exports.fun = {
-  name: "oof",
-  description: "Wyrzuca autora wiadomości z serwera"
+  usage: "śo!oof"
 };

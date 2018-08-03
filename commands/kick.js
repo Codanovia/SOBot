@@ -7,18 +7,19 @@ exports.run = async (client, message, params) => {
   parseUser(message, user);
   const modlog = client.channels.find('name', 'ogłoszenia');
   const caseNum = await caseNumber(client, modlog);
-  if (!modlog) return message.reply('nie mogę znaleźć kanału z ogłoszeniami')
-  if (message.mentions.users.size < 1) return message.reply('musisz napisać kogo chcesz wyrzucić.').catch(console.error);
+  if (!modlog) return message.channel.send('<:blobtickdeny:474749732317822986> Nie mogę znaleźć kanału z ogłoszeniami!')
+  if (message.mentions.users.size < 1) return message.channel.send('<:blobtickdeny:474749732317822986> Musisz napisać kogo chcesz wyrzucić!').catch(console.error);
   const reason = params.splice(1, params.length).join(' ') || 'brak';
-  user.send(`Zostałeś wyrzucony z serwera za ${reason}! Ale spokojnie, możesz wrócić na serwer w każdej w chwili klikając na ten link: https://discord.gg/XWCxeUZ :smiley:`);
+  user.send(`:boot: Zostałeś wyrzucony z serwera za ${reason}! Ale spokojnie, możesz wrócić na serwer w każdej w chwili klikając na ten link: https://discord.gg/E36ZGZE :smiley:`);
   message.guild.member(user).kick();
+  message.channel.send(`<:blobtickaccept:474749869727416333> Pomyślnie wyrzucono użytkownika ${user}`);
 
   const embed = new RichEmbed()
-  .setAuthor('Czacior - ostrzeżenia i bany', 'https://i.imgur.com/zNC67j6.png')
-  .setColor([232, 44, 12])
+  .setAuthor('Świat Oodrona - ostrzeżenia i bany', 'https://cdn.discordapp.com/attachments/467629030124814339/474718837389131777/swiat_oodrona.png')
+  .setColor([230, 45, 10])
   .setTimestamp()
   .setDescription(`**Działanie:** Wyrzucenie z serwera\n**Karany:** ${user}\n**Odpowiedzialny moderator:** ${message.author}\n**Powód:** ${reason}`)
-  .setFooter(`Przypadek ${caseNum}`, "https://i.imgur.com/zNC67j6.png");
+  .setFooter(`Przypadek ${caseNum}`, message.guild.iconURL);
   return client.channels.get(modlog.id).send({embed});
 };
 
@@ -31,11 +32,6 @@ exports.conf = {
 
 exports.help = {
   name: 'kick',
-  description: 'Wyrzuca użytkownika z Czaciora',
-  usage: 'cz!kick (nazwa użytkownika) [powód]'
-};
-
-exports.moderation = {
-  name: 'kick',
-  description: 'Wyrzuca użytkownika z Czaciora'
+  description: 'Wyrzuca użytkownika ze Świata Oodrona',
+  usage: 'śo!kick (nazwa użytkownika) [powód]'
 };

@@ -17,10 +17,5 @@ exports.conf = {
 exports.help = {
   name: "placki",
   description: "Pokazuje gifa z królikiem jedzącego placki, czy tam naleśniki",
-  usage: "cz!placki"
-};
-
-exports.fun = {
-  name: "placki",
-  description: "Pokazuje gifa z królikiem jedzącego placki, czy tam naleśniki"
+  usage: "śo!placki"
 };

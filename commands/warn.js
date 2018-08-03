@@ -8,19 +8,19 @@ exports.run = async (client, message, params) => {
   parseUser(message, user);
   const modlog = client.channels.find('name', 'ogłoszenia');
   const caseNum = await caseNumber(client, modlog);
-  if (!modlog) return message.reply('nie mogę znaleźć kanału z ogłoszeniami.');
-  if (message.mentions.users.size < 1) return message.reply('musisz napisać komu chcesz dać ostrzeżenie.').catch(console.error);
-  message.reply(`pomyślnie wstawiono ostrzeżenie użytkownikowi ${user}`);
+  if (!modlog) return message.channel.send('<:blobtickdeny:474749732317822986> Nie mogę znaleźć kanału z ogłoszeniami!');
+  if (message.mentions.users.size < 1) return message.channel.send('<:blobtickdeny:474749732317822986> Musisz napisać komu chcesz dać ostrzeżenie!').catch(console.error);
+  message.channel.send(`<:blobtickaccept:474749869727416333> Pomyślnie wstawiono ostrzeżenie użytkownikowi ${user}`);
 
   const reason = params.splice(1, params.length).join(' ') || 'brak';
-  user.send(`Właśnie dostałeś ostrzeżenie za ${reason}! Nie jest ci przykro z tego powodu? :thinking:`)
+  user.send(`<:bloberror:474751915918360607> Właśnie dostałeś ostrzeżenie za ${reason}! Nie jest ci przykro z tego powodu? :thinking:`)
 
   const embed = new RichEmbed()
-  .setAuthor('Czacior - ostrzeżenia i bany', 'https://i.imgur.com/zNC67j6.png')
-  .setColor([232, 44, 12])
+  .setAuthor('Świat Oodrona - ostrzeżenia i bany', message.guild.iconURL)
+  .setColor([230, 45, 10])
   .setTimestamp()
   .setDescription(`**Działanie:** Ostrzeżenie\n**Karany:** ${user}\n**Odpowiedzialny moderator:** ${message.author}\n**Powód:** ${reason}`)
-  .setFooter(`Przypadek ${caseNum}`, "https://i.imgur.com/zNC67j6.png");
+  .setFooter(`Przypadek ${caseNum}`, message.guild.iconURL);
   return client.channels.get(modlog.id).send({embed});
 };
 
@@ -33,11 +33,6 @@ exports.conf = {
 
 exports.help = {
   name: 'warn',
-  description: 'Daje ostrzeżenie użytkownikowi naruszający regulamin Czaciora',
-  usage: 'cz!warn (nazwa użytkownika) (powód)'
-};
-
-exports.moderation = {
-  name: 'warn',
-  description: 'Daje ostrzeżenie użytkownikowi naruszający regulamin Czaciora'
+  description: 'Daje ostrzeżenie użytkownikowi naruszający regulamin Świata Oodrona',
+  usage: 'śo!warn (nazwa użytkownika) [powód]'
 };

@@ -12,10 +12,5 @@ exports.conf = {
 exports.help = {
   name: "pizza",
   description: "Przygotowuje pizzę",
-  usage: "cz!pizza"
-};
-
-exports.fun = {
-  name: "pizza",
-  description: "Przygotowuje pizzę"
+  usage: "śo!pizza"
 };

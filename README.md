@@ -1,6 +1,6 @@
-# Czacior Bot
-Bot stworzony na potrzebę serwera [Czacior na Discordzie.](https://discord.gg/XWCxeUZ)\
-Obecna wersja bota to 1.4.2
+# ŚOBot
+Bot stworzony na potrzebę serwera [Świat Oodrona na Discordzie.](https://discord.gg/E36ZGZE)\
+Obecna wersja bota to 2.0.0
 
 # Hostowanie na CT8/MyDevil
 1. Zaloguj się do panelu
@@ -25,4 +25,4 @@ Obecna wersja bota to 1.4.2
 
 4. Wejdź na twoją domenę którą zarejestrowałeś w panelu
 
-5. Jeżeli wyświetla się - w tym przypadku - "Witaj Czacior!" to oznacza że bot działa prawidłowo.
+5. Jeżeli wyświetla się - w tym przypadku - "Witaj, świecie Oodrona!" to oznacza że bot działa prawidłowo.

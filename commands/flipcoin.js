@@ -21,10 +21,5 @@ exports.conf = {
 exports.help = {
   name: "flipcoin",
   description: "Orzeł czy reszka?",
-  usage: "cz!flipcoin"
-};
-
-exports.fun = {
-  name: "flipcoin",
-  description: "Orzeł czy reszka?"
+  usage: "śo!flipcoin"
 };

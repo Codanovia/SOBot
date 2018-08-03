@@ -91,10 +91,5 @@ exports.conf = {
 exports.help = {
   name: "ogar",
   description: "Wysyła losową osobę, żeby ogarnęła czat",
-  usage: "cz!ogar"
-};
-
-exports.fun = {
-  name: "ogar",
-  description: "Wysyła losową osobę, żeby ogarnęła czat"
+  usage: "śo!ogar"
 };

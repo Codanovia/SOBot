@@ -12,15 +12,13 @@ exports.run = (client, message, params) => {
 
   let pDiamonds = diamonds[pUser.id].diamonds;
 
-  if (isNaN(params[1])) return message.reply('wpisana wartość jest nieprawidłowa.');
-
-  if (params[1] < 1) return message.reply('nie możesz dodać zerowych lub ujemnych diamentów!');
+  if (isNaN(params[1])) return message.channel.send('<:blobtickdeny:474749732317822986> Wpisana wartość jest nieprawidłowa.');
 
   diamonds[pUser.id] = {
     diamonds: pDiamonds + parseInt(params[1])
   };
 
-  message.reply(`pomyślnie dodano ${params[1]} :large_blue_diamond: na konto użytkownika ${pUser}`);
+  message.channel.send(`<:blobtickaccept:474749869727416333> Pomyślnie dodano ${params[1]} :large_blue_diamond: na konto użytkownika ${pUser}`);
 
   fs.writeFile('./diamonds.json', JSON.stringify(diamonds), (err) => {
     if (err) console.error(err)
@@ -32,16 +30,11 @@ exports.conf = {
   enabled: true,
   guildOnly: true,
   aliases: ['dodajdiamenty'],
-  permLevel: 4
+  permLevel: 3
 };
 
 exports.help = {
   name: "adddiamonds",
   description: "Dodaje diamenty na czyjeś konto",
-  usage: "cz!adddiamonds (nazwa użytkownika) (liczba diamentów)"
-};
-
-exports.util = {
-  name: "adddiamonds",
-  description: "Dodaje diamenty na czyjeś konto"
+  usage: "śo!adddiamonds (nazwa użytkownika) (liczba diamentów)"
 };

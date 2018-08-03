@@ -38,10 +38,5 @@ exports.conf = {
 exports.help = {
   name: "8ball",
   description: "Pyta magiczną kulę 8 o coś tam",
-  usage: "cz!8ball (pytanie)"
-};
-
-exports.fun = {
-  name: "8ball",
-  description: "Pyta magiczną kulę 8 o coś tam"
+  usage: "śo!8ball (pytanie)"
 };

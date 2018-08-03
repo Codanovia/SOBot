@@ -2,15 +2,15 @@ const {RichEmbed} = require('discord.js');
 const config = require('../config.json');
 
 exports.run = async (client, message, params) => {
-  const reason = params.slice(1).join(' ');
+  const reason = params.splice(1, params.length).join(' ') || 'brak';
   client.unbanReason = reason;
   client.unbanAuth = message.author;
-  const user = params[0];
-  const modlog = client.channels.find('name', 'ogłoszenia')
-  if (reason.length < 1) return message.reply('musisz podać powód odbanowania użytkownika')
-  if (!user) return message.reply('musisz podać nazwę użytkownika którego chcesz odbanować.').catch(console.error);
+  const user = message.mentions.users.first();
+  const modlog = client.channels.find('name', 'ogłoszenia');
+  if (!modlog) return message.channel.send('<:blobtickdeny:474749732317822986> Nie mogę znaleźć kanału z ogłoszeniami!');
+  if (message.mentions.users.size < 1) return message.channel.send('<:blobtickdeny:474749732317822986> Musisz napisać kogo chcesz odbanować!').catch(console.error);
   message.guild.unban(user);
-  message.reply(`pomyślnie odbanowano użytkownika ${user}`);
+  message.channel.send(`<:blobtickaccept:474749869727416333> Pomyślnie odbanowano użytkownika ${user}`);
 };
 
 exports.conf = {
@@ -23,10 +23,5 @@ exports.conf = {
 exports.help = {
   name: 'unban',
   description: 'Odbanowuje zbanowanego użytkownika',
-  usage: 'cz!unban (nazwa użytkownika) (powód)'
-};
-
-exports.moderation = {
-  name: 'unban',
-  description: 'Odbanowuje zbanowanego użytkownika'
+  usage: 'śo!unban (nazwa użytkownika) [powód]'
 };

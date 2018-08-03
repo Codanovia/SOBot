@@ -29,7 +29,7 @@ exports.run = (client, message, params) => {
    message.channel.send(`W tej chwili masz ${uKeys} :key:`)
  }
  else if (message.mentions.users.size > 1) {
-   message.channel.send('Nie możesz wymienić aż tak tylu użytkowników!');
+   message.channel.send('<:blobtickdeny:474749732317822986> Nie możesz wymienić aż tak tylu użytkowników!');
  }
  else {
    message.channel.send(`Ten użytkownik ma ${sKeys} :key:`);
@@ -46,10 +46,5 @@ exports.conf = {
 exports.help = {
   name: "klucze",
   description: "Wyświetla liczbę posiadanych kluczy",
-  usage: "cz!klucze [nazwa użytkownika]"
-};
-
-exports.currency = {
-  name: "klucze",
-  description: "Wyświetla liczbę posiadanych kluczy"
+  usage: "śo!klucze [nazwa użytkownika]"
 };

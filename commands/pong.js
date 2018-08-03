@@ -15,10 +15,5 @@ exports.conf = {
 exports.help = {
   name: "pong",
   description: "...Ping!",
-  usage: "cz!pong"
-};
-
-exports.util = {
-  name: "pong",
-  description: "...Ping!"
+  usage: "śo!pong"
 };

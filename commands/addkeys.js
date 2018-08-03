@@ -12,15 +12,13 @@ exports.run = (client, message, params) => {
 
   let pKeys = keys[pUser.id].keys;
 
-  if (isNaN(params[1])) return message.reply('wpisana wartość jest nieprawidłowa.');
-
-  if (params[1] < 1) return message.reply('nie możesz dodać zerowych lub ujemnych kluczy!');
+  if (isNaN(params[1])) return message.channel.send('<:blobtickdeny:474749732317822986> Wpisana wartość jest nieprawidłowa.');
 
   keys[pUser.id] = {
     keys: pKeys + parseInt(params[1])
   };
 
-  message.reply(`pomyślnie dodano ${params[1]} :key: na konto użytkownika ${pUser}`);
+  message.channel.send(`<:blobtickaccept:474749869727416333> Pomyślnie dodano ${params[1]} :key: na konto użytkownika ${pUser}`);
 
   fs.writeFile('./keys.json', JSON.stringify(keys), (err) => {
     if (err) console.error(err)
@@ -32,16 +30,11 @@ exports.conf = {
   enabled: true,
   guildOnly: true,
   aliases: ['dodajklucze'],
-  permLevel: 4
+  permLevel: 3
 };
 
 exports.help = {
   name: "addkeys",
   description: "Dodaje klucze na czyjeś konto",
-  usage: "cz!addkeys (nazwa użytkownika) (liczba kluczy)"
-};
-
-exports.util = {
-  name: "addkeys",
-  description: "Dodaje klucze na czyjeś konto"
+  usage: "śo!addkeys (nazwa użytkownika) (liczba kluczy)"
 };

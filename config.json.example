@@ -1,8 +1,8 @@
 {
   "token": "your bot token goes here",
-  "prefix": "cz!",
+  "prefix": "śo!",
   "modRoleName": "Moderator",
   "adminRoleName": "Admin",
-  "bannedRoleName": "Czacior Bot Ban",
+  "bannedRoleName": "ŚOBot Ban",
   "ownerID": "your id goes here"
 }
