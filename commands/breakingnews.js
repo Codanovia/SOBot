@@ -23,6 +23,7 @@ exports.run = (client, message, params) => {
   annoucedThing[20] = 'Saper ' + Math.ceil(Math.random()*10);
   annoucedThing[21] = Math.ceil(Math.random()*10);
   annoucedThing[22] = 'ŚOBot ' + Math.ceil(Math.random()*10);
+  annoucedThing[23] = 'Świat Oodrona ' + Math.ceil(Math.random()*10);
 
   var howFound = new Array();
   howFound[0] = ' ogłoszone';
@@ -63,6 +64,7 @@ exports.run = (client, message, params) => {
   howFound[35] = ' odkryta';
 
   var whereFound = new Array();
+  whereFound[0] = ' gdzieś tam';
   whereFound[1] = ' na E3';
   whereFound[2] = ' na budowie';
   whereFound[3] = ' na lotnisku';

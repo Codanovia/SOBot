@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 module.exports = (guild, user) => {
-  guild.defaultChannel.send(`Użytkownik **${user}** został odbanowany.`);
+  guild.channels.get(guild.channels.find('name', 'powitanie_pożegnanie').id).send(`Użytkownik **${user}** został odbanowany.`);
   const embed = new Discord.RichEmbed()
   .setAuthor('Świat Oodrona - ostrzeżenia i bany', guild.iconURL)
   .setColor([0, 255, 0])

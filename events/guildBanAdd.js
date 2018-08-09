@@ -1,3 +1,3 @@
 module.exports = (guild, user) => {
-  guild.defaultChannel.send(`Użytkownik **${user}** został zbanowany.`);
+  guild.channels.get(guild.channels.find('name', 'powitanie_pożegnanie').id).send(`Użytkownik **${user}** został zbanowany.`);
 };
