@@ -36,7 +36,7 @@ exports.run = (client, message, params) => {
   memeText[10] = 'Złote Euro Dolar Złote Euro Dolar Złote Euro Dolar Złote Euro Dolar Złote Euro Dolar Złote Euro Dolar Złote Euro Dolar Złote Euro Dolar Złote Euro Dolar Złote Euro Dolar';
   memeText[11] = 'Oof!';
   memeText[12] = 'SPORRRTOWA';
-  memeText[14] = 'E';
+  memeText[14] = '<:E_:476121739882135562>';
   memeText[15] = 'YOLOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO';
   memeText[16] = 'cisza';
   memeText[17] = 'dawać 3 sezon :star: :butterfly:';
