@@ -1,6 +1,6 @@
 exports.run = (client, message, params) => {
   var result = params.join(' ');
-  if (!result) return client.user.setActivity('cały serwer | śo!help | v. 2.0.0', {type: 'WATCHING'});
+  if (!result) return client.user.setActivity('cały serwer | śo!help | v. 2.0.1', {type: 'WATCHING'});
   client.user.setActivity(result);
 };
 
