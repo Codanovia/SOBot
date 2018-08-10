@@ -2,9 +2,8 @@ exports.run = (client, message, params) => {
   var news = new Array();
   news[0] = '**BREAKING NEWS:** ';
   news[1] = '**FakTy:** ';
-  news[2] = '**BREAKING NEWS:** ';
-  news[3] = '**FakTy:** ';
-  news[4] = 'placeholder';
+  news[2] = '**Fakty:** ';
+  news[3] = '**Wiadomości:** ';
 
   var annoucedThing = new Array();
   annoucedThing[0] = 'Despacito ' + Math.ceil(Math.random()*10);
@@ -33,7 +32,6 @@ exports.run = (client, message, params) => {
   annoucedThing[23] = 'Świat Oodrona ' + Math.ceil(Math.random()*10);
   annoucedThing[24] = 'Niewidzialny nick';
   annoucedThing[25] = annoucedThing[Math.floor(Math.random()*annoucedThing.length)] + ': Battle Royale';
-  annoucedThing[26] = 'placeholder';
 
   var howFound = new Array();
   howFound[0] = ' ogłoszone';
@@ -72,7 +70,6 @@ exports.run = (client, message, params) => {
   howFound[33] = ' skradziona';
   howFound[34] = ' odkryto';
   howFound[35] = ' odkryta';
-  howFound[36] = 'placeholder';
 
   var whereFound = new Array();
   whereFound[0] = ' gdzieś tam';
@@ -103,7 +100,6 @@ exports.run = (client, message, params) => {
   whereFound[25] = ' przez NATO';
   whereFound[26] = ' przez Krzysztofa Kolumba';
   whereFound[27] = ' przeze mnie';
-  whereFound[28] = 'placeholder';
 
   message.channel.send(news[Math.floor(Math.random()*news.length)] + annoucedThing[Math.floor(Math.random()*annoucedThing.length)] + howFound[Math.floor(Math.random()*howFound.length)] + whereFound[Math.floor(Math.random()*whereFound.length)]);
 

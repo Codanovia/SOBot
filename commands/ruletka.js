@@ -4,7 +4,6 @@ exports.run = (client, message, params) => {
   roulette[1] = ':skull: :gun:';
   roulette[2] = ':relieved: :gun:';
   roulette[3] = ':skull: :gun:';
-  roulette[4] = 'placeholder';
 
   message.channel.send(':thinking: :gun:')
   .then(message => {
@@ -22,5 +21,5 @@ exports.conf = {
 exports.help = {
   name: "ruletka",
   description: "Rosyjska ruletka!",
-  usage: "śo!roulette"
+  usage: "śo!ruletka"
 };

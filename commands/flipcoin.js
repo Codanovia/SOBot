@@ -4,7 +4,6 @@ exports.run = (client, message, params) => {
   coin[2] = 'reszkę!';
   coin[2] = 'orła!';
   coin[3] = 'reszkę!';
-  coin[4] = 'placeholder';
 
   message.channel.send('Rzucam monetę...')
     .then(message => {

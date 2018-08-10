@@ -77,7 +77,6 @@ exports.run = (client, message, params) => {
   ogar[74] = 'https://cdn.discordapp.com/attachments/461251813178343449/463623515757608980/ogar_2.png';
   ogar[75] = 'https://cdn.discordapp.com/attachments/461251813178343449/463622693539938316/penguin_stock.png';
   ogar[76] = 'https://cdn.discordapp.com/attachments/461251813178343449/471652169569796105/tvpis.jpg';
-  ogar[77] = 'placeholder';
 
   message.channel.send(ogar[Math.floor(Math.random()*ogar.length)]);
 };

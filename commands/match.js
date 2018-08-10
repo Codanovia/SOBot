@@ -15,7 +15,6 @@ exports.run = (client, message, params) => {
   lovePercentage[12] = '200%! :couplekiss:';
   lovePercentage[13] = '-1%! :face_palm:';
   lovePercentage[14] = '-100%! <:E_:476121739882135562>';
-  lovePercentage[15] = 'placeholder';
 
   message.channel.send(`:heart: Wskaźnik miłości między **${params[0]}** a **${params[1]}** to **${lovePercentage[Math.floor(Math.random()*lovePercentage.length)]}**`)
 };
