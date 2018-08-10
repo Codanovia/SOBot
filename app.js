@@ -40,6 +40,8 @@ client.elevation = message => {
   if (mod_role && message.member.roles.has(mod_role.id)) permLevel = 2;
   const mod_role2 = message.guild.roles.find('name', config.modRoleName2);
   if (mod_role2 && message.member.roles.has(mod_role2.id)) permLevel = 2;
+  const admin_role = message.guild.roles.find('name', config.adminRoleName);
+  if (admin_role && message.member.roles.has(admin_role.id)) permLevel = 3;
   const owner_role = message.guild.roles.find('name', config.ownerRoleName);
   if (owner_role && message.member.roles.has(owner_role.id)) permLevel = 3;
   return permLevel;

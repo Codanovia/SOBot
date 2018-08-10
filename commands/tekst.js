@@ -4,12 +4,14 @@ exports.run = (client, message, params) => {
   cap[1] = 'Mixona';
   cap[2] = 'Capa';
   cap[3] = 'Mixona';
+  cap[4] = 'placeholder';
 
   var hate = new Array();
   hate[0] = 'Windows 10';
   hate[1] = 'Microsoft Edge';
   hate[2] = 'Windows 10';
   hate[3] = 'Microsoft Edge';
+  hate[4] = 'placeholder';
 
   var yorin = new Array();
   yorin[0] = 'Yorin';
@@ -22,6 +24,7 @@ exports.run = (client, message, params) => {
   leave[1] = 'Discord';
   leave[2] = 'Chatango';
   leave[3] = 'Discord';
+  leave[4] = 'placeholder';
 
   var memeText = new Array();
   memeText[0] = 'taa kasme';
@@ -113,7 +116,8 @@ exports.run = (client, message, params) => {
   memeText[88] = 'Wiecie że mamy trzy polski? Polska, Wielkopolska i Małopolska';
   memeText[89] = 'Oglądam profile GD\nPatrzę: wiadomości z językiem hiszpańskim\nReakcja: FUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU';
   memeText[90] = 'Na Czaciorze ponoć 99% to były posty z Radia Polska Muzyka. Tutaj (Świat Oodrona) max. 10%';
-  memeText[91] = 'placeholder';
+  memeText[91] = 'Ogar';
+  memeText[92] = 'placeholder';
 
   message.channel.send(memeText[Math.floor(Math.random()*memeText.length)]);
 };
