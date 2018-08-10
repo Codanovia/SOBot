@@ -4,7 +4,7 @@ const {parseUser} = require('../util/parseUser.js');
 
 exports.run = async (client, message, params) => {
   const guild = message.guild;
-  let user = message.guild.member(message.mentions.users.first()) || message.guild.members.get(params[0]);
+  let user = message.mentions.users.first();
   parseUser(message, user);
   const modlog = client.channels.find('name', 'ogłoszenia');
   const caseNum = await caseNumber(client, modlog);
