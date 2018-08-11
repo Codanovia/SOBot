@@ -113,7 +113,8 @@ exports.run = (client, message, params) => {
   memeText[89] = 'Oglądam profile GD\nPatrzę: wiadomości z językiem hiszpańskim\nReakcja: FUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU';
   memeText[90] = 'Na Czaciorze ponoć 99% to były posty z Radia Polska Muzyka. Tutaj (Świat Oodrona) max. 10%';
   memeText[91] = 'Ogar';
-  
+  memeText[92] = 'Ale Kubuś Play to picie';
+
   message.channel.send(memeText[Math.floor(Math.random()*memeText.length)]);
 };
 
