@@ -114,6 +114,15 @@ exports.run = (client, message, params) => {
   memeText[90] = 'Na Czaciorze ponoć 99% to były posty z Radia Polska Muzyka. Tutaj (Świat Oodrona) max. 10%';
   memeText[91] = 'Ogar';
   memeText[92] = 'Ale Kubuś Play to picie';
+  memeText[93] = '[Na mocy Artykułu 13. o ochronie praw autorskich, komentarz został zablokowany przez Parlament Unii Europejskiej]';
+  memeText[94] = 'Nie wolno srać o 9:50';
+  memeText[95] = 'SZKLIT';
+  memeText[96] = 'Eti Poof';
+  memeText[97] = 'Eti Oof';
+  memeText[98] = 'ITI Puf';
+  memeText[99] = 'ITI Oof';
+  memeText[100] = 'ITI Szklit';
+  memeText[101] = '1206-letni Uran mnie zbije';
 
   message.channel.send(memeText[Math.floor(Math.random()*memeText.length)]);
 };
