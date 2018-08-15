@@ -25,7 +25,7 @@ exports.run = (client, message, params) => {
   eightBall[22] = 'Bardzo wątpliwie';
   eightBall[23] = 'Lepiej, żebyś nie wiedział';
   eightBall[24] = 'Skoncentruj się i zapytaj ponownie';
-  eightBall[25] = 'Zamknij pizde i chuj ci w kolano';
+  eightBall[25] = 'Zamknij pizdę i chuj ci w kolano';
 
   message.channel.send(':8ball: :thinking:')
   .then(message => {

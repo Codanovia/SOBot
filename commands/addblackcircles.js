@@ -30,7 +30,7 @@ exports.conf = {
   enabled: true,
   guildOnly: true,
   aliases: ['dodajczarnekoła'],
-  permLevel: 3
+  permLevel: 4
 };
 
 exports.help = {

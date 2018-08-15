@@ -123,6 +123,12 @@ exports.run = (client, message, params) => {
   memeText[99] = 'ITI Oof';
   memeText[100] = 'ITI Szklit';
   memeText[101] = '1206-letni Uran mnie zbije';
+  memeText[102] = 'Może ten stary humor rozwiniemy o kiwi?';
+  memeText[103] = 'O ty chuju miał być Easy kurwa';
+  memeText[104] = 'Polska > Chile > Polska > Chile > Polska > Chile > Polska > Chile > Polska > Chile > Polska > Chile > Polska > Chile > Polska > Chile > Polska > Chile > Polska > Chile > Polska > Chile';
+  memeText[105] = 'Hitler Click';
+  memeText[106] = 'Xzemu';
+  memeText[107] = 'Zet Puf';
 
   message.channel.send(memeText[Math.floor(Math.random()*memeText.length)]);
 };

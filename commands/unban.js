@@ -6,7 +6,7 @@ exports.run = async (client, message, params) => {
   client.unbanReason = reason;
   client.unbanAuth = message.author;
   let user = params[0];
-  const modlog = client.channels.find('name', 'ogłoszenia');
+  const modlog = client.channels.find('name', '📜ogłoszenia📜');
   if (!modlog) return message.channel.send('<:blobtickdeny:474749732317822986> Nie mogę znaleźć kanału z ogłoszeniami!');
   if (message.mentions.users.size < 1) return message.channel.send('<:blobtickdeny:474749732317822986> Musisz napisać kogo chcesz odbanować!').catch(console.error);
   message.guild.unban(user);

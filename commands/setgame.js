@@ -1,6 +1,6 @@
 exports.run = (client, message, params) => {
   var result = params.join(' ');
-  if (!result) return client.user.setActivity('cały serwer | v. 2.0.3', {type: 'WATCHING'});
+  if (!result) return client.user.setActivity('cały serwer | v. 2.0.4', {type: 'WATCHING'});
   client.user.setActivity(result);
 };
 
