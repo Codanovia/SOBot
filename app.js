@@ -63,4 +63,11 @@ client.on('error', e => {
   console.log(e.replace(regToken, 'that was redacted'));
 });
 
+client.on("message", message => {
+  if (message.channel.id == config.channelId) {
+message.react("👍");
+message.react("👎");
+console.log("Zauważono nową sugestie!");
+});
+
 client.login(config.token);
