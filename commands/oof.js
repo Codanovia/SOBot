@@ -1,5 +1,5 @@
 exports.run = (client, message, params) => {
-  message.author.send('<:oof:474751352241651734> Oof! Jeśli chcesz się odrodzić, to tutaj masz zaproszenie: https://discord.gg/E36ZGZE :smiley:');
+  message.author.send('<:oof:474751352241651734> Oof! Jeśli chcesz się odrodzić, to tutaj masz zaproszenie: https://discord.gg/sRhcFe3 :smiley:');
   message.guild.member(message.author).kick();
 };
 

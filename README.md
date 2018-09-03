@@ -1,5 +1,5 @@
 # ŚOBot
-Bot stworzony na potrzebę serwera [Świat Oodrona na Discordzie.](https://discord.gg/E36ZGZE)\
+Bot stworzony na potrzebę serwera [Świat Oodrona na Discordzie.](https://discord.gg/sRhcFe3)\
 Obecna wersja bota to 2.0.4
 
 # Hostowanie na CT8/MyDevil

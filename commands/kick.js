@@ -10,7 +10,7 @@ exports.run = async (client, message, params) => {
   if (!modlog) return message.channel.send('<:blobtickdeny:474749732317822986> Nie mogę znaleźć kanału z ogłoszeniami!')
   if (message.mentions.users.size < 1) return message.channel.send('<:blobtickdeny:474749732317822986> Musisz napisać kogo chcesz wyrzucić!').catch(console.error);
   const reason = params.splice(1, params.length).join(' ') || 'brak';
-  user.send(`:boot: Zostałeś wyrzucony z serwera za ${reason}! Ale spokojnie, możesz wrócić na serwer w każdej w chwili klikając na ten link: https://discord.gg/E36ZGZE :smiley:`);
+  user.send(`:boot: Zostałeś wyrzucony z serwera za ${reason}! Ale spokojnie, możesz wrócić na serwer w każdej w chwili klikając na ten link: https://discord.gg/sRhcFe3 :smiley:`);
   message.guild.member(user).kick(reason);
   message.channel.send(`<:blobtickaccept:474749869727416333> Pomyślnie wyrzucono użytkownika ${user}`);
 
