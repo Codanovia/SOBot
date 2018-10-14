@@ -15,7 +15,9 @@ Obecna wersja bota to 2.0.4
 
 6. Wybierz wersje N.JS 10.3.0
 
-7. Tworzysz stronę
+7. Tworzysz stronę.
+
+![GIF](https://i.imgur.com/fH0Osou.gif)
 ## Logowanie się do FTP i wgrywanie plików
 1. Zaloguj się na twoje konto FTP
 
