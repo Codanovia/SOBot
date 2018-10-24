@@ -18,4 +18,10 @@ module.exports = message => {
     if (cmd.conf.enabled === false) return;
     cmd.run(client, message, params, perms);
   }
+
+  if (message.channel.id == config.channelId) {
+    message.react("<:blobtickaccept:474749869727416333>");
+    message.react("<:blobtickdeny:474749732317822986>");
+    console.log("Zauważono nową sugestie!");
+  }
 };

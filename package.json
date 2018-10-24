@@ -19,6 +19,7 @@
     "http": "0.0.0",
     "moment": "^2.22.2",
     "node-gyp": "^3.6.2",
-    "superagent": "^3.8.3"
+    "superagent": "^3.8.3",
+    "weather-js": "^2.0.0"
   }
 }
