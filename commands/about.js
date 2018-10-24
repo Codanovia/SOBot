@@ -4,7 +4,7 @@ exports.run = (client, message, params) => {
   const embed = new RichEmbed()
   .setColor([255, 255, 0])
   .setAuthor('Informacje o bocie', message.guild.iconURL)
-  .setDescription(`**Twórca bota:** <@158584302785921025>\n**Współpracownicy bota:** <@277192632181194753>, <@161820881704845312>\n**Wersja bota:** 2.0.4\n**Repozytorium git:** https://github.com/Codanovia/SOBot`);
+  .setDescription(`**Twórca bota:** <@158584302785921025>\n**Współpracownicy bota:** <@277192632181194753>, <@161820881704845312>, <@424515984129261569>\n**Wersja bota:** 2.0.5\n**Kod źródłowy:** https://github.com/Codanovia/SOBot`);
   message.channel.send({embed});
 };
 

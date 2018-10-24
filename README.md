@@ -1,6 +1,6 @@
 # ŚOBot
 Bot stworzony na potrzebę serwera [Świat Oodrona na Discordzie.](https://discord.gg/sRhcFe3)\
-Obecna wersja bota to 2.0.4
+Obecna wersja bota to 2.0.5
 
 # Hostowanie na CT8/MyDevil
 1. Zaloguj się do panelu

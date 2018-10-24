@@ -1,6 +1,6 @@
 {
   "name": "ŚOBot",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Bot stworzony na potrzebę serwera Świat Oodrona na Discordzie.",
   "main": "app.js",
   "repository": {
